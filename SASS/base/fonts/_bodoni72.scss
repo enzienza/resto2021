@@ -1,0 +1,23 @@
+// main: ../_index.scss
+
+
+@font-face {
+    font-family: 'smallcaps';
+    src: url('assets/fonts/bodoni72_smallcaps/bodoni_72_smallcaps_book-webfont.woff2') format('woff2'),
+         url('assets/fonts/bodoni72_smallcaps/bodoni_72_smallcaps_book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'bodoni';
+    src: url('assets/fonts/bodoni-seventytwo/bodoni-seventytwo-itc-book-webfont.woff2') format('woff2'),
+         url('assets/fonts/bodoni-seventytwo/bodoni-seventytwo-itc-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

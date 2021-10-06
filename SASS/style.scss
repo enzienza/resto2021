@@ -10,29 +10,23 @@ copyright : Enza ©2021
 Tags:
 */
 
-
-
-body{
-  background-color: aqua;
-  color: #333
-}
-
 // VENDOR -------------------------------
-@import "./vendor/bootstrap";
+@import "./vendor/index";
+
 // UTILITIES ----------------------------
-@import "./utilities/utilities";
+@import "./utilities/index";
 
 // BASE ---------------------------------
-@import "./base/base";
+@import "./base/index";
 
 // COMPONENTS ---------------------------
-@import "./components/components";
+@import "./components/index";
 
 // ELEMENTS -----------------------------
-@import "./elements/elements";
+@import "./elements/index";
 
 // FORM ---------------------------------
-@import "./form/form";
+@import "./form/index";
 
 // LAYOUT -------------------------------
-@import "./layout/layout";
+@import "./layout/index";

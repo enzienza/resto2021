@@ -1,0 +1,24 @@
+// main: _index.scss
+
+
+/* ------------------------------------------------------------ */
+/* COLOR */
+/* ------------------------------------------------------------ */
+$color-primary: #F5A623;
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 10%);
+
+$color-grey: #919191;
+//$color-grey-light:
+//$color-grey-dark:
+
+$color-dark: #333;
+
+
+$color-light: #fafafa;
+
+/* ------------------------------------------------------------ */
+/* TYPOGRAPHIE */
+/* ------------------------------------------------------------ */
+$font-primary: 'apercu', sans-serif;
+$font-secondary: 'smallcaps', serif;

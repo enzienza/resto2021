@@ -84,15 +84,26 @@
 
          /* SCRIPT ---------------------------------- */
 
-         // cdn JS bootstrap 4.0 ---------------------
+         // cdn JS bootstrap 4.4.1 ---------------------
+         wp_register_script(
+             'bootstrap',
+             'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js',
+             ['popper', 'jquery'],
+             '4.4.1', true
+         );
+
+         // CDN popper -------------------------------
+         wp_register_script(
+             'popper',
+             'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',
+             [],
+             '1.16.0', true
+         );
+
+         // MY PLUGIN ------------------------------------
 
 
-         // JS theme ---------------------------------
-
-
-         // MY JS ------------------------------------
-
-         // cdn jQuery -------------------------------
+         // CDN jQuery -------------------------------
          wp_deregister_script('jquery');
          wp_register_script(
              'jquery',
@@ -104,6 +115,13 @@
 
 
          /* STYLE ----------------------------------- */
+         // cdn CSS bootstrap 4.4.1 ---------------------
+                 wp_register_style(
+                     'bootstrap',
+                     'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css',
+                     [], '4.4.1'
+                 );
+                 wp_enqueue_style('bootstrap');
 
 
          // css custem -------------------------------
