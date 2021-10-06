@@ -1,0 +1,107 @@
+// main: ../_components.scss
+
+// background navigation
+.navbar{
+  font-family: $font-secondary;
+  letter-spacing: 1px;
+  height: 70px;
+  background-color: transparent;
+  color: $color-light;
+}
+
+.solid{
+  background-color: $color-dark;
+  @include transition(background-color .05s ease 0s);
+  @include box-shadow(0 0 4px rgba(0,0,0,0.3));
+
+  .navbar-nav{
+    .nav-link{
+      &::before, &::after{
+        @include box-shadow(0 .1rem .1rem rgba(0, 0, 0, 0.4));
+      }
+    }
+  }
+}
+
+// ul
+.navbar-nav{
+  font-family: $font-primary;
+
+  // <li.current-menu-item> => page current
+  .current-menu-item{
+    .nav-link{
+      // coulor text current
+      display: block;
+
+      &::before, &::after{
+        @include double-transition(left 0.1s ease 0s, right 0.1s ease 0.1s);
+      }
+
+      &::before{
+        left: 0;
+        right: 60%;
+      }
+      &::after{
+        right: 0;
+        left: 60%;
+      }
+    }
+  }
+
+  .active{
+    // coulor text current
+    display: block;
+
+    &::before, &::after{
+      @include double-transition(left 0.1s ease 0s, right 0.1s ease 0.1s);
+    }
+
+    &::before{
+      left: 0;
+      right: 60%;
+    }
+    &::after{
+      right: 0;
+      left: 60%;
+    }
+  }
+
+  //<li> => all items in menu
+  .nav-item{
+    position: relative;
+    padding: 0 1em;
+
+    .nav-link{
+      &::before, &::after{
+        background: $color-primary;
+      }
+
+      &::before{
+        top: 0;
+      }
+
+      &:hover::before, &:active::before{
+        left: 0;
+        right: 60%;
+        @include double-transition(left 0.1s ease 0s, right 0.1s ease 0.1s);
+      }
+
+      &::after{
+        top: auto;
+        bottom: 0;
+      }
+
+      &:hover::after, &:active::after{
+        right: 0;
+        left: 60%;
+        @include double-transition(left 0.1s ease 0s, right 0.1s ease 0.1s);
+      }
+
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        height: .1rem;
+      }
+    }
+  }
+}

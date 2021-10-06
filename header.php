@@ -46,12 +46,12 @@
           /**
           * [navigation principal]
           */
-          // wp_nav_menu(array(
-          //     'theme_location' => 'header',
-          //     'depth'          => 2,
-          //     'container'      => false,
-          //     'menu_class'     => 'navbar-nav'
-          // ));
+          wp_nav_menu(array(
+              'theme_location' => 'header',
+              'depth'          => 2,
+              'container'      => false,
+              'menu_class'     => 'navbar-nav'
+          ));
           ?>
         </div>
       </div>

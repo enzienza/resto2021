@@ -53,21 +53,21 @@
  *     nav_menu_css_class: Filters the CSS classes applied to a menu item’s list item element.
  *     nav_menu_link_attributes: Filters the HTML attributes applied to a menu item’s anchor element.
  */
-// add_filter(
-//     "nav_menu_css_class",
-//     function($classes){
-//         $classes[] = 'nav-item';
-//         return $classes;
-//     }
-// );
-//
-// add_filter(
-//     "nav_menu_link_attributes",
-//     function($attrs){
-//         $attrs['class'] = 'nav-link';
-//         return $attrs;
-//     }
-// );
+add_filter(
+    "nav_menu_css_class",
+    function($classes){
+        $classes[] = 'nav-item';
+        return $classes;
+    }
+);
+
+add_filter(
+    "nav_menu_link_attributes",
+    function($attrs){
+        $attrs['class'] = 'nav-link';
+        return $attrs;
+    }
+);
 
 /**
  * 3 - Include Styles and script
@@ -100,8 +100,23 @@
              '1.16.0', true
          );
 
-         // MY PLUGIN ------------------------------------
+         wp_enqueue_script('bootstrap');
 
+         // MY JavaScript ------------------------------------
+         wp_enqueue_script(
+             'scroll-top',
+             get_template_directory_uri().'/assets/js/scrollTop.js',
+             [],
+             '1.0',
+             true
+         );
+         wp_enqueue_script(
+             'solid-navbar',
+             get_template_directory_uri().'/assets/js/solid-navbar.js',
+             [],
+             '1.0',
+             true
+         );
 
          // CDN jQuery -------------------------------
          wp_deregister_script('jquery');

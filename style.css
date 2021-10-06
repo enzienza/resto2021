@@ -16,6 +16,55 @@ Tags:
 /* ------------------------------------------------------------ */
 /* TYPOGRAPHIE */
 /* ------------------------------------------------------------ */
+/**
+ * BOX-SIZING
+ * @type {[type]}
+ */
+/**
+ * DISPLAY : FLEX
+ */
+/**
+ * DISPLAY : FLEX
+ */
+/**
+ * JUSTIFY-CONTENT
+ *
+ * Description :
+ * La propriété justify-content définit l'alignement le long de l'axe principal.
+ * Elle permet de distribuer l'espace excédentaire lorsque tous les items flex
+ * sur une ligne sont inflexibles ou lorsqu'ils ont atteint leur taille maximale.
+ * Elle contrôle aussi l'alignement des items lorsqu'ils débordent.
+ *
+ * @type {[flex-start | flex-end | center | space-between | space-around]}
+ */
+/*
+ * ALIGN-ITEMS
+ *
+ * Description :
+ * La propriété align-items définit la façon dont les items d'une ligne sont
+ * disposés le long de l'axe "cross". On peut le voir comme la version de j
+ * ustify-content pour "cross axis".
+ *
+ * @type {[flex-start | flex-end | center | baseline | stretch]}
+ */
+/*
+ * ALIGN-CONTENT
+ *
+ * Description :
+ * La propriété align-content aligne les lignes d'un container flex à
+ * l'intérieur de l'espace où il reste de l'espace sur l'axe cross,
+ * un peu comme justify-content aligne les items sur l'axe principal.
+ *
+ * @type {(flex-start | flex-end | center | space-between | space-around | stretch)}
+ */
+/*
+ * ALIGN-CONTENT
+ *
+ * Description :
+ *
+
+ * @type {(nowrap | wrap | wrap-reverse)}
+ */
 * {
   margin: 0;
   padding: 0;
@@ -36,8 +85,12 @@ a:hover {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 html {
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 body {
@@ -52,10 +105,6 @@ h5,
 h6 {
   margin: 1rem 0 2rem 0;
   font-family: "smallcaps", serif;
-}
-
-ul {
-  list-style: none;
 }
 
 img {
@@ -97,6 +146,157 @@ img {
   font-style: normal;
 }
 
+.navbar {
+  font-family: "smallcaps", serif;
+  letter-spacing: 1px;
+  height: 70px;
+  background-color: transparent;
+  color: #fafafa;
+}
+
+.solid {
+  background-color: #333;
+  -webkit-transition: background-color 0.05s ease 0s;
+  -o-transition: background-color 0.05s ease 0s;
+  transition: background-color 0.05s ease 0s;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.solid .navbar-nav .nav-link::before, .solid .navbar-nav .nav-link::after {
+  -webkit-box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+}
+
+.navbar-nav {
+  font-family: "apercu", sans-serif;
+}
+
+.navbar-nav .current-menu-item .nav-link {
+  display: block;
+}
+
+.navbar-nav .current-menu-item .nav-link::before, .navbar-nav .current-menu-item .nav-link::after {
+  -webkit-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+  -o-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+  transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+}
+
+.navbar-nav .current-menu-item .nav-link::before {
+  left: 0;
+  right: 60%;
+}
+
+.navbar-nav .current-menu-item .nav-link::after {
+  right: 0;
+  left: 60%;
+}
+
+.navbar-nav .active {
+  display: block;
+}
+
+.navbar-nav .active::before, .navbar-nav .active::after {
+  -webkit-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+  -o-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+  transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+}
+
+.navbar-nav .active::before {
+  left: 0;
+  right: 60%;
+}
+
+.navbar-nav .active::after {
+  right: 0;
+  left: 60%;
+}
+
+.navbar-nav .nav-item {
+  position: relative;
+  padding: 0 1em;
+}
+
+.navbar-nav .nav-item .nav-link::before, .navbar-nav .nav-item .nav-link::after {
+  background: #F5A623;
+}
+
+.navbar-nav .nav-item .nav-link::before {
+  top: 0;
+}
+
+.navbar-nav .nav-item .nav-link:hover::before, .navbar-nav .nav-item .nav-link:active::before {
+  left: 0;
+  right: 60%;
+  -webkit-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+  -o-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+  transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+  top: auto;
+  bottom: 0;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after, .navbar-nav .nav-item .nav-link:active::after {
+  right: 0;
+  left: 60%;
+  -webkit-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+  -o-transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+  transition: left 0.1s ease 0s, right 0.1s ease 0.1s;
+}
+
+.navbar-nav .nav-item .nav-link::before, .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  height: .1rem;
+}
+
+.scrollTop {
+  background: #db8c0a;
+  color: #fafafa;
+  position: fixed;
+  font-size: 16px;
+  width: 40px;
+  max-width: 40px;
+  height: 40px;
+  max-height: 40px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  border-radius: 100%;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  transition: background 0.5s;
+  -webkit-box-shadow: 0 7px 10px -5px rgba(9, 9, 9, 0.9);
+  box-shadow: 0 7px 10px -5px rgba(9, 9, 9, 0.9);
+}
+
+.scrollTop:hover {
+  text-decoration: none;
+  color: #fafafa;
+  opacity: 1;
+}
+
+.scrollTop .icons {
+  vertical-align: middle;
+}
+
+.scrollTop [class^="flaticon-"]::before, .scrollTop [class*=" flaticon-"]::before {
+  font-size: inherit;
+  margin-left: 0;
+}
+
 /* ------------------------------------------------------------ */
 /* fundamentals */
 footer {
@@ -116,4 +316,8 @@ footer a {
 
 footer a:hover {
   color: #f7ba54;
+}
+
+main {
+  height: 100vh;
 }

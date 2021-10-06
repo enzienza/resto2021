@@ -1,0 +1,13 @@
+// main: ../_mixins.scss
+
+@mixin transition($string) {
+    -webkit-transition: $string;
+    -o-transition: $string;
+    transition: $string;
+}
+
+@mixin double-transition($a, $b){
+    -webkit-transition: $a, $b;
+    -o-transition: $a, $b;
+    transition: $a, $b;
+}
