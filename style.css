@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/*!
+Theme Name: Pékin-Paris 2021
+Theme URI:
+Author: Enza Lombardo
+Author URI: http://www.enzalombardo.be
+Description: Template pour le restaurant Pékin-Paris
+Version: 1.0
+Text Domain:
+copyright : Enza ©2021
+Tags:
+*/
+body {
+  background-color: aqua;
+  color: #333;
+}
+
+/*------------------------------------------------------------------------------*/
+/* BOOTSTRAP */
+/*------------------------------------------------------------------------------*/
