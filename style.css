@@ -373,6 +373,39 @@ img {
   margin-left: 0;
 }
 
+.table-horaire {
+  font-size: smaller;
+  width: 75%;
+}
+
+.table-horaire .item-days {
+  border-bottom: 1px solid #4d4d4d;
+  height: 50px;
+}
+
+.table-horaire .item-days:last-child {
+  border: none;
+}
+
+.table-horaire .day {
+  padding-left: 2em;
+}
+
+.table-horaire .hour-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.table-horaire .hour-item {
+  padding: 0 .5em;
+}
+
 footer {
   background: #333;
   color: #919191;

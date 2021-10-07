@@ -25,7 +25,8 @@
 require_once('inc/customize/config-theme.php');
 
 /* customize back-end */
-
+require_once ('inc/customize/config-admin.php');
+require_once ('inc/customize/custom-dashboard.php');
 
 /* customize columns */
 
@@ -42,6 +43,8 @@ require_once('inc/customize/config-theme.php');
 /** =====================================================
  *  3 - OPTIONS-THEME
  */
+require_once ('inc/options-theme/generality.php');
+require_once ('inc/options-theme/horaire.php');
 
 
 

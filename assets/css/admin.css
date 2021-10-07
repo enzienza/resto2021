@@ -1,0 +1,312 @@
+/*
+Name: Custom Adimin
+Author: Enza Lombardo
+Author URI: http://www.enzalombardo.be
+Description: feuille de style pour personnaliser l'Administration du site
+Version: 1.0
+Text Domain: pekinparis
+copyright : Enza ©2021
+Tags:
+*/
+
+/*
+  ----- INDEX -----
+
+1 - Style for the login page
+2 - style for columns Admin of CPT
+3 - style for ALL administatrion
+4 - style for the generality page
+5 - Style for the timetable page
+6 - Style for the customtheme page
+7 - Style for the form-customtheme
+8 - CUSTOM  POST_TYPE_SUGGESTION
+
+*/
+
+
+/* ==============================================
+ *      1 - Style for the login page
+ */
+body.login {
+    /* background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), */
+    /* url('../img/avimayeur.jpg') no-repeat fixed; */
+    /* background: -o-radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), */
+    /* url('../img/avimayeur.jpg') no-repeat fixed; */
+    /* background: radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), */
+    /* url('../img/avimayeur.jpg') no-repeat fixed; */
+    background-image: linear-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
+}
+
+#pearlIt {
+    background-color: inherit;
+    box-shadow: none;
+}
+
+.login form {
+    border: none;
+}
+
+#login #nav a, #login #backtoblog a {
+    color: white;
+    display: block;
+    background: gray;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 4px rgba(85, 85, 85, 0.7);
+}
+
+h1 a {
+    /* background: url('../img/logo-login.png') no-repeat !important; */
+    width: 257px !important;
+    height: 198px !important;
+    filter: invert(0.9);
+}
+
+/* ==============================================
+ *      2 - style for columns Admin of CPT
+ */
+/* .column-cd {
+    padding: 11px 0 0 3px;
+    width: 2.2em;
+    vertical-align: top;
+}
+
+.column-thumbnail{
+    width: 100px;
+    text-align: center;
+}
+
+.column-thumbnail img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.column-date{
+    width: 20%;
+} */
+
+
+
+/* ==============================================
+ *      3 - style for ALL administatrion
+ */
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select, textarea {
+    box-shadow: 0 0 0 transparent;
+    border-radius: 4px;
+    border: 1px solid #7e8993;
+    background: #fff;
+    color: #32373c;
+}
+
+.wp-admin {
+    background: #f1f1f1;
+}
+
+.wrap .wp-heagin-inline {
+    font-size: 2em;
+}
+
+form h2 {
+    padding-top: 1.5em;
+    border-top: 1px solid #cecece;
+    width: 98%;
+    font-size: 1.3em;
+}
+
+.img-hero {
+    width: 300px;
+    height: auto;
+}
+
+.description {
+    color: #cecece;
+}
+
+.space {
+    margin: 0 1em;
+}
+
+/* ==============================================
+ *      4 - style for the generality page
+ */
+
+
+.form-generality .img-logo {
+    width: 250px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+/* ==============================================
+ *      5 - Style for the timetable page
+ */
+
+.form-timetable .form-table {
+    width: 50%;
+}
+
+.form-timetable th{
+    width: 150px;
+    padding: .5em;
+    line-height: 2;
+    vertical-align: top;
+}
+
+.form-timetable td{
+    line-height: inherit;
+    padding: 15px 0;
+    vertical-align: middle;
+}
+td .service:first-child{
+    margin-bottom: 15px;
+}
+
+.form-timetable .service-ok{
+    display: inline-table;
+    width: 160px;
+}
+
+.form-timetable .service-ok input[type="checkbox"],
+.form-timetable .service-close input[type="checkbox"]{
+    margin: .5em !important;
+}
+
+.form-timetable .service-de label,
+.form-timetable .service-a label{
+    margin: 0 .5em;
+}
+.form-timetable .service-close{
+    margin-top: .5em;
+}
+.form-timetable tr {
+    border-bottom: 1px solid #cecece;
+}
+
+.form-timetable tr:last-child {
+    border-bottom: none;
+}
+
+.form-timetable input[type="time"] {
+    width: 6em;
+    text-align: center;
+}
+
+.form-timetable input[type="checkbox"] {
+    margin: 1em !important;
+}
+
+/* ==============================================
+ *      6 - Style for the customtheme page
+ */
+
+.importers {
+    margin-top: 2.5em;
+}
+
+.importers .import-system {
+    width: 150px;
+    font-weight: bolder;
+}
+
+.importers td.desc {
+    width: 400px;
+}
+
+.height-space {
+    padding: .5em 0;
+}
+
+
+.box-color{
+    width: 150px;
+    height: 3em;
+    border: 1px solid #cecece;
+}
+
+.theme-clair{
+    background-color: #fafafa;
+}
+
+.theme-foncer{
+    background-color: #333333;
+}
+
+.box-deco{
+    width: 200px;
+    height: 3em;
+    margin-top: 1em;
+}
+
+.flying{
+    background: url('../img/flying-left.png') no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.print{
+    background: url('../img/poose-feet-left.png') no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.flip{
+    background: url('../img/flip.png') no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+
+/* ==============================================
+ *      7 - Style for the form-customtheme
+ */
+
+.form-customtheme h2, .form-timetable h2, .form-generality h2{
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #5B6786;
+}
+
+.form-customtheme h2::before, .form-timetable h2::before, .form-generality h2::before{
+    content: "-";
+    margin-right: .5em;
+    font-size: larger;
+}
+
+.form-customtheme .section-description,
+.form-timetable .section-description,
+.form-generality .section-description{
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 20px;
+    font-weight: lighter;
+    font-size: .9em;
+}
+
+/* ==============================================
+ *      8 - CUSTOM  POST_TYPE_SUGGESTION
+ */
+/* .post-type-suggestion #advanced-sortables,
+.post-type-suggestion #slugdiv {
+    display: none !important;
+}
+
+.post-type-suggestion .description {
+    color: #a9a8a8;
+} */
