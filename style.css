@@ -6,7 +6,7 @@ Author: Enza Lombardo
 Author URI: http://www.enzalombardo.be
 Description: Template pour le restaurant Pékin-Paris
 Version: 1.0
-Text Domain:
+Text Domain: pekinparis
 copyright : Enza ©2021
 Tags:
 */
@@ -144,6 +144,82 @@ img {
   src: url("assets/fonts/bodoni-seventytwo/bodoni-seventytwo-itc-book-webfont.woff2") format("woff2"), url("assets/fonts/bodoni-seventytwo/bodoni-seventytwo-itc-book-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("assets/fonts/flaticon/Flaticon.eot");
+  src: url("assets/fonts/flaticon/Flaticon.eot?#iefix") format("embedded-opentype"), url("assets/fonts/flaticon/Flaticon.woff2") format("woff2"), url("assets/fonts/flaticon/Flaticon.woff") format("woff"), url("assets/fonts/flaticon/Flaticon.ttf") format("truetype"), url("assets/fonts/flaticon/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("assets/fonts/flaticon/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-style: normal;
+}
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.flaticon-instagram:before {
+  content: "\f100";
+}
+
+.flaticon-heart:before {
+  content: "\f101";
+}
+
+.flaticon-facebook:before {
+  content: "\f102";
+}
+
+.flaticon-whatsapp:before {
+  content: "\f103";
+}
+
+.flaticon-twitter:before {
+  content: "\f104";
+}
+
+.flaticon-linkedin:before {
+  content: "\f105";
+}
+
+.flaticon-pin:before {
+  content: "\f106";
+}
+
+.flaticon-messenger:before {
+  content: "\f107";
+}
+
+.flaticon-worldwide:before {
+  content: "\f108";
+}
+
+.flaticon-email:before {
+  content: "\f109";
 }
 
 .navbar {
@@ -297,8 +373,6 @@ img {
   margin-left: 0;
 }
 
-/* ------------------------------------------------------------ */
-/* fundamentals */
 footer {
   background: #333;
   color: #919191;
@@ -316,6 +390,87 @@ footer a {
 
 footer a:hover {
   color: #f7ba54;
+}
+
+.info {
+  background: #333;
+  color: #919191;
+  margin-bottom: 0;
+}
+
+.block-contact, .block-horaire {
+  margin-top: 3em;
+  font-family: "aperculight";
+}
+
+.block-contact, .block-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.block-horaire {
+  margin-bottom: 2em;
+}
+
+.contacting .title {
+  font-size: x-large;
+  font-family: "smallcaps", serif;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.contacting .location {
+  width: 150px;
+}
+
+.contacting p {
+  margin-bottom: 0;
+}
+
+.contacting .phone {
+  line-height: 3;
+  font-size: smaller;
+}
+
+.social-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 0;
+}
+
+.social-item {
+  padding: 0 .5em;
+}
+
+.social-item:first-child {
+  padding-right: 2px;
+}
+
+.social-item .icons:hover {
+  color: #f7ba54;
+}
+
+.block-logo .logo {
+  width: 14em;
+  height: auto;
+  -webkit-filter: invert(0.5);
+  filter: invert(0.5);
+}
+
+.info-foncer, .footer-foncer {
+  background-color: #262626;
 }
 
 main {

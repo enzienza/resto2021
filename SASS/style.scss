@@ -5,28 +5,27 @@ Author: Enza Lombardo
 Author URI: http://www.enzalombardo.be
 Description: Template pour le restaurant Pékin-Paris
 Version: 1.0
-Text Domain:
+Text Domain: pekinparis
 copyright : Enza ©2021
 Tags:
 */
 
 // VENDOR -------------------------------
-@import "./vendor/index";
 
 // UTILITIES ----------------------------
 @import "./utilities/utilities";
 
 // BASE ---------------------------------
-@import "./base/index";
+@import "./base/base";
 
 // COMPONENTS ---------------------------
 @import "./components/components";
 
 // ELEMENTS -----------------------------
-@import "./elements/index";
+@import "./elements/elements";
 
 // FORM ---------------------------------
-@import "./form/index";
+@import "./form/form";
 
 // LAYOUT -------------------------------
-@import "./layout/index";
+@import "./layout/layout";

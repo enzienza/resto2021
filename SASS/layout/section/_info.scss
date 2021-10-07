@@ -1,0 +1,75 @@
+// main: ../_layout.scss
+
+.info{
+    background: $color-dark;
+    color: $color-grey;
+    margin-bottom: 0;
+}
+
+.block-contact, .block-horaire{
+    margin-top: 3em;
+    font-family: $font-primary-light;
+}
+
+.block-contact, .block-logo{
+    @include flex;
+    @include justify-content(center);
+    @include align-content(center);
+    @include align-items(baseline);
+    @include flex-wrap(wrap);
+}
+
+.block-horaire{
+    margin-bottom: 2em;
+}
+
+.contacting{
+    .title{
+        font-size: x-large;
+        font-family: $font-secondary;
+        font-weight: bold;
+        line-height: 2;
+    }
+    .location{
+        width: 150px;
+    }
+    p{
+        margin-bottom: 0;
+    }
+    .phone{
+        line-height: 3;
+        font-size: smaller;
+    }
+}
+
+.social{
+    &-list{
+        @include inline-flex;
+        margin-bottom: 0;
+    }
+    &-item{
+        padding: 0 .5em;
+        &:first-child{
+            padding-right: 2px;
+        }
+
+        .icons{
+            //font-size: large;
+            &:hover{
+                color: $color-primary-light;
+            }
+        }
+    }
+}
+
+.block-logo{
+    .logo{
+        width: 14em;
+        height: auto;
+        @include filter-invert(0.5);
+    }
+}
+
+.info-foncer, .footer-foncer{
+    background-color: darken($color-dark, 5%);
+}

@@ -1,0 +1,55 @@
+// main: ../_base.scss
+
+
+@font-face {
+    font-family: "Flaticon";
+    src: url("assets/fonts/flaticon/Flaticon.eot");
+    src: url("assets/fonts/flaticon/Flaticon.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/flaticon/Flaticon.woff2") format("woff2"),
+    url("assets/fonts/flaticon/Flaticon.woff") format("woff"),
+    url("assets/fonts/flaticon/Flaticon.ttf") format("truetype"),
+    url("assets/fonts/flaticon/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "Flaticon";
+        src: url("assets/fonts/flaticon/Flaticon.svg#Flaticon") format("svg");
+    }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-family: Flaticon;
+    //font-size: 20px;
+    font-style: normal;
+    //margin-left: 20px;
+}
+
+.fi:before{
+    display: inline-block;
+    font-family: "Flaticon";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.flaticon-instagram:before { content: "\f100"; }
+.flaticon-heart:before { content: "\f101"; }
+.flaticon-facebook:before { content: "\f102"; }
+.flaticon-whatsapp:before { content: "\f103"; }
+.flaticon-twitter:before { content: "\f104"; }
+.flaticon-linkedin:before { content: "\f105"; }
+.flaticon-pin:before { content: "\f106"; }
+.flaticon-messenger:before { content: "\f107"; }
+.flaticon-worldwide:before { content: "\f108"; }
+.flaticon-email:before { content: "\f109"; }
