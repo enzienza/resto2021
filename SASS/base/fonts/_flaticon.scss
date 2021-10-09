@@ -5,12 +5,10 @@
     font-family: "Flaticon";
     src: url("assets/fonts/flaticon/Flaticon.eot");
     src: url("assets/fonts/flaticon/Flaticon.eot?#iefix") format("embedded-opentype"),
-    url("assets/fonts/flaticon/Flaticon.woff2") format("woff2"),
-    url("assets/fonts/flaticon/Flaticon.woff") format("woff"),
-    url("assets/fonts/flaticon/Flaticon.ttf") format("truetype"),
-    url("assets/fonts/flaticon/Flaticon.svg#Flaticon") format("svg");
-    font-weight: normal;
-    font-style: normal;
+         url("assets/fonts/flaticon/Flaticon.woff2") format("woff2"),
+         url("assets/fonts/flaticon/Flaticon.woff") format("woff"),
+         url("assets/fonts/flaticon/Flaticon.ttf") format("truetype"),
+         url("assets/fonts/flaticon/Flaticon.svg#Flaticon") format("svg");
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -20,12 +18,14 @@
     }
 }
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before,
+i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
     font-family: Flaticon;
     //font-size: 20px;
     font-style: normal;
     //margin-left: 20px;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .fi:before{
@@ -43,13 +43,148 @@
     font-smoothing: antialiased;
 }
 
-.flaticon-instagram:before { content: "\f100"; }
-.flaticon-heart:before { content: "\f101"; }
-.flaticon-facebook:before { content: "\f102"; }
-.flaticon-whatsapp:before { content: "\f103"; }
-.flaticon-twitter:before { content: "\f104"; }
-.flaticon-linkedin:before { content: "\f105"; }
-.flaticon-pin:before { content: "\f106"; }
-.flaticon-messenger:before { content: "\f107"; }
-.flaticon-worldwide:before { content: "\f108"; }
-.flaticon-email:before { content: "\f109"; }
+
+.flaticon-instagram:before {
+    content: "\f101";
+}
+.flaticon-facebook:before {
+    content: "\f102";
+}
+.flaticon-twitter:before {
+    content: "\f103";
+}
+.flaticon-place-localizer:before {
+    content: "\f104";
+}
+.flaticon-download:before {
+    content: "\f105";
+}
+.flaticon-upload:before {
+    content: "\f106";
+}
+.flaticon-cutlery:before {
+    content: "\f107";
+}
+.flaticon-tray:before {
+    content: "\f108";
+}
+.flaticon-salad:before {
+    content: "\f109";
+}
+.flaticon-salad-1:before {
+    content: "\f10a";
+}
+.flaticon-chili-pepper:before {
+    content: "\f10b";
+}
+.flaticon-rice:before {
+    content: "\f10c";
+}
+.flaticon-tempura:before {
+    content: "\f10d";
+}
+.flaticon-spring-rolls:before {
+    content: "\f10e";
+}
+.flaticon-rice-bowl:before {
+    content: "\f10f";
+}
+.flaticon-momo:before {
+    content: "\f110";
+}
+.flaticon-shrimp:before {
+    content: "\f111";
+}
+.flaticon-noodles:before {
+    content: "\f112";
+}
+.flaticon-sushi:before {
+    content: "\f113";
+}
+.flaticon-sushi-1:before {
+    content: "\f114";
+}
+.flaticon-moon:before {
+    content: "\f115";
+}
+.flaticon-sun:before {
+    content: "\f116";
+}
+.flaticon-castle:before {
+    content: "\f117";
+}
+.flaticon-symbol:before {
+    content: "\f118";
+}
+.flaticon-beans:before {
+    content: "\f119";
+}
+.flaticon-noodle:before {
+    content: "\f11a";
+}
+.flaticon-pagoda:before {
+    content: "\f11b";
+}
+.flaticon-hot-pot:before {
+    content: "\f11c";
+}
+.flaticon-bowl:before {
+    content: "\f11d";
+}
+.flaticon-dimsum:before {
+    content: "\f11e";
+}
+.flaticon-dimsum-1:before {
+    content: "\f11f";
+}
+.flaticon-soup:before {
+    content: "\f120";
+}
+.flaticon-shrimp-1:before {
+    content: "\f121";
+}
+.flaticon-salad-2:before {
+    content: "\f122";
+}
+.flaticon-fish:before {
+    content: "\f123";
+}
+.flaticon-duck:before {
+    content: "\f124";
+}
+.flaticon-pig:before {
+    content: "\f125";
+}
+.flaticon-hen:before {
+    content: "\f126";
+}
+.flaticon-sheep:before {
+    content: "\f127";
+}
+.flaticon-cow:before {
+    content: "\f128";
+}
+.flaticon-ewe:before {
+    content: "\f129";
+}
+.flaticon-pig-1:before {
+    content: "\f12a";
+}
+.flaticon-duck-1:before {
+    content: "\f12b";
+}
+.flaticon-ox:before {
+    content: "\f12c";
+}
+.flaticon-hen-1:before {
+    content: "\f12d";
+}
+.flaticon-beef:before {
+    content: "\f12e";
+}
+.flaticon-telephone:before {
+    content: "\f12f";
+}
+.flaticon-envelope:before {
+    content: "\f130";
+}

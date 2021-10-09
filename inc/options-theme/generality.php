@@ -167,10 +167,13 @@ class pekinparis_generality{
         // -> Sauvegarder les champs
         register_setting(self::GROUP, 'add_location');
         register_setting(self::GROUP, 'location');
+        register_setting(self::GROUP, 'icon_location');
         register_setting(self::GROUP, 'add_phone');
         register_setting(self::GROUP, 'phone');
+        register_setting(self::GROUP, 'icon_phone');
         register_setting(self::GROUP, 'add_mail');
         register_setting(self::GROUP, 'mail');
+        register_setting(self::GROUP, 'icon_mail');
 
         /**
          * SECTION 3 : SECTION_URL ===================================
@@ -234,7 +237,10 @@ class pekinparis_generality{
     // DICPLAY SECTION 2 : SECTION_INFO ==================================
     public static function display_section_info(){
         ?>
-            <p class="section-description">Section dédiée aux inforamations de contact</p>
+            <p class="section-description">
+              Cette section dédiée aux inforamations de contact.
+              Cocher les éléments que vous souhaitez afficher
+            </p>
         <?php
     }
 
@@ -281,6 +287,7 @@ class pekinparis_generality{
     public static function field_location_pekinparis(){
         $add_location = esc_attr(get_option('add_location'));
         $location = esc_attr(get_option('location'));
+        $icon_location = esc_attr(get_option('icon_location'));
         ?>
             <input type="checkbox"
                    id="add_location"
@@ -294,11 +301,23 @@ class pekinparis_generality{
                    value="<?php echo $location ?>"
                    class="regular-text"
             />
+            <p class="display-icon">
+              <input type="checkbox"
+                     id="icon_location"
+                     name="icon_location"
+                     value="1"
+                     <?php checked(1, $icon_location, true); ?>
+              >
+              Afficher l'îcone
+              <i class="icons flaticon-place-localizer"></i>
+            </p>
+
         <?php
     }
     public static function field_phone_pekinparis(){
         $add_phone = esc_attr(get_option('add_phone'));
         $phone = esc_attr(get_option('phone'));
+        $icon_phone = esc_attr(get_option('icon_phone'));
         ?>
           <input type="checkbox"
                  id="add_phone"
@@ -312,11 +331,22 @@ class pekinparis_generality{
                    value="<?php echo $phone ?>"
                    class="regular-text"
             />
+            <p class="display-icon">
+              <input type="checkbox"
+                     id="icon_phone"
+                     name="icon_phone"
+                     value="1"
+                     <?php checked(1, $icon_phone, true); ?>
+              >
+              Afficher l'îcone
+              <i class="icons flaticon-telephone"></i>
+            </p>
         <?php
     }
     public static function field_mail_pekinparis(){
         $add_mail = esc_attr(get_option('add_mail'));
         $mail = esc_attr(get_option('mail'));
+        $icon_mail = esc_attr(get_option('icon_mail'));
         ?>
         <input type="checkbox"
                id="add_mail"
@@ -330,6 +360,16 @@ class pekinparis_generality{
                value="<?php echo $mail ?>"
                class="regular-text"
         />
+        <p class="display-icon">
+          <input type="checkbox"
+                 id="icon_mail"
+                 name="icon_mail"
+                 value="1"
+                 <?php checked(1, $icon_mail, true); ?>
+          >
+          Afficher l'îcone
+          <i class="icons flaticon-envelope"></i>
+        </p>
         <?php
     }
 

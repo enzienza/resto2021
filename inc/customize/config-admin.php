@@ -24,15 +24,15 @@
  * 1 - Custom Page Admin
  *     Function that allow to customize the login page
  */
-// function custom_admin(){
-//     wp_enqueue_style(
-//         'pekinparis_admin',
-//         get_template_directory_uri().'/assets/css/admin.css'
-//     );
-// }
-//
-// add_action('login_head','custom_admin');
-// add_action('admin_head','custom_admin');
+function custom_admin(){
+    wp_enqueue_style(
+        'pekinparis_admin',
+        get_template_directory_uri().'/assets/css/admin.css'
+    );
+}
+
+add_action('login_head','custom_admin');
+add_action('admin_head','custom_admin');
 
 
 
@@ -65,6 +65,11 @@ add_filter( 'login_headerurl', 'custom_login_logo_link');
 add_action('admin_enqueue_scripts', function(){
 
     // CUSTOM CSS - Personnaliser l'administration
+    wp_enqueue_style(
+        'flaticon',
+        get_template_directory_uri().'/assets/fonts/flaticon/flaticon.css'
+    );
+
     wp_enqueue_style(
         'pekinparis_admin',
         get_template_directory_uri().'/assets/css/admin.css'

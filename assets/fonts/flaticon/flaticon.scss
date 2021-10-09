@@ -1,0 +1,217 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?0f5b86bc31e069f02d0efec29513f429") format("truetype"),
+url("./flaticon.woff?0f5b86bc31e069f02d0efec29513f429") format("woff"),
+url("./flaticon.woff2?0f5b86bc31e069f02d0efec29513f429") format("woff2"),
+url("./flaticon.eot?0f5b86bc31e069f02d0efec29513f429#iefix") format("embedded-opentype"),
+url("./flaticon.svg?0f5b86bc31e069f02d0efec29513f429#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "instagram": "\f101",
+    "facebook": "\f102",
+    "twitter": "\f103",
+    "place-localizer": "\f104",
+    "download": "\f105",
+    "upload": "\f106",
+    "cutlery": "\f107",
+    "tray": "\f108",
+    "salad": "\f109",
+    "salad-1": "\f10a",
+    "chili-pepper": "\f10b",
+    "rice": "\f10c",
+    "tempura": "\f10d",
+    "spring-rolls": "\f10e",
+    "rice-bowl": "\f10f",
+    "momo": "\f110",
+    "shrimp": "\f111",
+    "noodles": "\f112",
+    "sushi": "\f113",
+    "sushi-1": "\f114",
+    "moon": "\f115",
+    "sun": "\f116",
+    "castle": "\f117",
+    "symbol": "\f118",
+    "beans": "\f119",
+    "noodle": "\f11a",
+    "pagoda": "\f11b",
+    "hot-pot": "\f11c",
+    "bowl": "\f11d",
+    "dimsum": "\f11e",
+    "dimsum-1": "\f11f",
+    "soup": "\f120",
+    "shrimp-1": "\f121",
+    "salad-2": "\f122",
+    "fish": "\f123",
+    "duck": "\f124",
+    "pig": "\f125",
+    "hen": "\f126",
+    "sheep": "\f127",
+    "cow": "\f128",
+    "ewe": "\f129",
+    "pig-1": "\f12a",
+    "duck-1": "\f12b",
+    "ox": "\f12c",
+    "hen-1": "\f12d",
+    "beef": "\f12e",
+    "telephone": "\f12f",
+    "envelope": "\f130",
+);
+
+.flaticon-instagram:before {
+    content: map-get($flaticon-map, "instagram");
+}
+.flaticon-facebook:before {
+    content: map-get($flaticon-map, "facebook");
+}
+.flaticon-twitter:before {
+    content: map-get($flaticon-map, "twitter");
+}
+.flaticon-place-localizer:before {
+    content: map-get($flaticon-map, "place-localizer");
+}
+.flaticon-download:before {
+    content: map-get($flaticon-map, "download");
+}
+.flaticon-upload:before {
+    content: map-get($flaticon-map, "upload");
+}
+.flaticon-cutlery:before {
+    content: map-get($flaticon-map, "cutlery");
+}
+.flaticon-tray:before {
+    content: map-get($flaticon-map, "tray");
+}
+.flaticon-salad:before {
+    content: map-get($flaticon-map, "salad");
+}
+.flaticon-salad-1:before {
+    content: map-get($flaticon-map, "salad-1");
+}
+.flaticon-chili-pepper:before {
+    content: map-get($flaticon-map, "chili-pepper");
+}
+.flaticon-rice:before {
+    content: map-get($flaticon-map, "rice");
+}
+.flaticon-tempura:before {
+    content: map-get($flaticon-map, "tempura");
+}
+.flaticon-spring-rolls:before {
+    content: map-get($flaticon-map, "spring-rolls");
+}
+.flaticon-rice-bowl:before {
+    content: map-get($flaticon-map, "rice-bowl");
+}
+.flaticon-momo:before {
+    content: map-get($flaticon-map, "momo");
+}
+.flaticon-shrimp:before {
+    content: map-get($flaticon-map, "shrimp");
+}
+.flaticon-noodles:before {
+    content: map-get($flaticon-map, "noodles");
+}
+.flaticon-sushi:before {
+    content: map-get($flaticon-map, "sushi");
+}
+.flaticon-sushi-1:before {
+    content: map-get($flaticon-map, "sushi-1");
+}
+.flaticon-moon:before {
+    content: map-get($flaticon-map, "moon");
+}
+.flaticon-sun:before {
+    content: map-get($flaticon-map, "sun");
+}
+.flaticon-castle:before {
+    content: map-get($flaticon-map, "castle");
+}
+.flaticon-symbol:before {
+    content: map-get($flaticon-map, "symbol");
+}
+.flaticon-beans:before {
+    content: map-get($flaticon-map, "beans");
+}
+.flaticon-noodle:before {
+    content: map-get($flaticon-map, "noodle");
+}
+.flaticon-pagoda:before {
+    content: map-get($flaticon-map, "pagoda");
+}
+.flaticon-hot-pot:before {
+    content: map-get($flaticon-map, "hot-pot");
+}
+.flaticon-bowl:before {
+    content: map-get($flaticon-map, "bowl");
+}
+.flaticon-dimsum:before {
+    content: map-get($flaticon-map, "dimsum");
+}
+.flaticon-dimsum-1:before {
+    content: map-get($flaticon-map, "dimsum-1");
+}
+.flaticon-soup:before {
+    content: map-get($flaticon-map, "soup");
+}
+.flaticon-shrimp-1:before {
+    content: map-get($flaticon-map, "shrimp-1");
+}
+.flaticon-salad-2:before {
+    content: map-get($flaticon-map, "salad-2");
+}
+.flaticon-fish:before {
+    content: map-get($flaticon-map, "fish");
+}
+.flaticon-duck:before {
+    content: map-get($flaticon-map, "duck");
+}
+.flaticon-pig:before {
+    content: map-get($flaticon-map, "pig");
+}
+.flaticon-hen:before {
+    content: map-get($flaticon-map, "hen");
+}
+.flaticon-sheep:before {
+    content: map-get($flaticon-map, "sheep");
+}
+.flaticon-cow:before {
+    content: map-get($flaticon-map, "cow");
+}
+.flaticon-ewe:before {
+    content: map-get($flaticon-map, "ewe");
+}
+.flaticon-pig-1:before {
+    content: map-get($flaticon-map, "pig-1");
+}
+.flaticon-duck-1:before {
+    content: map-get($flaticon-map, "duck-1");
+}
+.flaticon-ox:before {
+    content: map-get($flaticon-map, "ox");
+}
+.flaticon-hen-1:before {
+    content: map-get($flaticon-map, "hen-1");
+}
+.flaticon-beef:before {
+    content: map-get($flaticon-map, "beef");
+}
+.flaticon-telephone:before {
+    content: map-get($flaticon-map, "telephone");
+}
+.flaticon-envelope:before {
+    content: map-get($flaticon-map, "envelope");
+}

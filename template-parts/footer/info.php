@@ -18,13 +18,28 @@
           <p class="title"><?php bloginfo('title') ?></p>
 
           <?php if(checked(1, get_option('add_location'), false)): ?>
-            <p class="location"><?php echo get_option('location') ?></p>
+            <p class="location">
+              <?php if(checked(1, get_option('icon_location'), false)): ?>
+                <i class="icons flaticon-place-localizer"></i>
+              <?php endif; ?>
+              <?php echo get_option('location') ?>
+            </p>
           <?php endif; ?>
           <?php if(checked(1, get_option('add_phone'), false)): ?>
-            <p class="phone"><?php echo get_option('phone') ?></p>
+            <p class="phone">
+              <?php if(checked(1, get_option('icon_phone'), false)): ?>
+                <i class="icons flaticon-telephone"></i>
+              <?php endif; ?>
+              <?php echo get_option('phone') ?>
+            </p>
           <?php endif; ?>
           <?php if(checked(1, get_option('add_mail'), false)): ?>
-            <p class="mail"><?php echo get_option('mail') ?></p>
+            <p class="mail">
+              <?php if(checked(1, get_option('icon_mail'), false)): ?>
+                <i class="icons flaticon-envelope"></i>
+              <?php endif; ?>
+              <?php echo get_option('mail') ?>
+            </p>
           <?php endif; ?>
 
 
@@ -33,7 +48,7 @@
           <?php if(checked(1, get_option('add_facebook'), false)): ?>
             <li class="social-item">
               <a href="<?php echo (esc_attr(get_option('url_facebook'))) ?>" target="_blank">
-                  <span class="icons flaticon-facebook"></span>
+                  <i class="icons flaticon-facebook"></i>
               </a>
             </li>
           <?php endif; ?>
@@ -41,7 +56,7 @@
           <?php if(checked(1, get_option('add_instagram'), false)): ?>
             <li class="social-item">
               <a href="<?php echo (esc_attr(get_option('url_instagram'))) ?>" target="_blank">
-                  <span class="icons flaticon-instagram"></span>
+                  <i class="icons flaticon-instagram"></i>
               </a>
             </li>
           <?php endif; ?>
@@ -49,7 +64,7 @@
           <?php if(checked(1, get_option('add_twitter'), false)): ?>
             <li class="social-item">
               <a href="<?php echo (esc_attr(get_option('url_twitter'))) ?>" target="_blank">
-                  <span class="icons flaticon-twitter"></span>
+                  <i class="icons flaticon-twitter"></i>
               </a>
             </li>
           <?php endif; ?>
