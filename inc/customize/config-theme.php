@@ -42,7 +42,7 @@
      // Custom menu areas
      register_nav_menus( array(
        'header' => esc_html__( 'Header', 'En tête du menu' ),
-       //'footer' => esc_html__( 'Footer', 'Pied de page' )
+       //'footer' => __( 'Footer', 'Pied de page' )
      ) );
    }
  }
@@ -113,6 +113,14 @@ add_filter(
          wp_enqueue_script(
              'solid-navbar',
              get_template_directory_uri().'/assets/js/solid-navbar.js',
+             [],
+             '1.0',
+             true
+         );
+
+         wp_enqueue_script(
+             'dark-mode',
+             get_template_directory_uri().'/assets/js/dark-mode.js',
              [],
              '1.0',
              true
