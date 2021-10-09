@@ -45,6 +45,15 @@ require_once ('inc/customize/custom-dashboard.php');
  */
 require_once ('inc/options-theme/generality.php');
 require_once ('inc/options-theme/horaire.php');
+require_once ('inc/options-theme/customtheme.php');
+
+// customTheme
+require_once ('inc/options-theme/customtheme/homepage.php');
+require_once ('inc/options-theme/customtheme/cartepage.php');
+require_once ('inc/options-theme/customtheme/takeawaypage.php');
+require_once ('inc/options-theme/customtheme/eventpage.php');
+require_once ('inc/options-theme/customtheme/errorpage.php');
+
 
 
 
