@@ -1,8 +1,11 @@
 // main: ../style.scss
 
+// THEME ----------------------------
+@import './theme/lightMode';
+@import './theme/darkMode';
 
 
-// BODY ---------------------
+// BODY -----------------------------
 // @import "./body/header";
 // @import "./body/main";
 // @import "./body/aside";

@@ -1,25 +1,44 @@
 // main: ./_utilities.scss
 
 
-/* ------------------------------------------------------------ */
-/* COLOR */
-/* ------------------------------------------------------------ */
+// ------------------------------------------------------------
+// COLOR
+// ------------------------------------------------------------
+// color Primary -------
 $color-primary: #F5A623;
 $color-primary-light: lighten($color-primary, 10%);
 $color-primary-dark: darken($color-primary, 10%);
 
+// color Secondary -----
+//$color-secondary: #555;
+//$color-secondary-light: lighten($color-secondary, 10%);
+//$color-secondary-dark: darken($color-secondary, 10%);
+
+// color Light ---------
+$color-light: #fafafa;
+$color-mid: #efefef;
+
+// color Grey ----------
 $color-grey: #919191;
 //$color-grey-light:
 //$color-grey-dark:
+$color-disabled: #d2d2d2;
+$color-disabled-label: #666;
 
+// color Dark ----------
 $color-dark: #333;
+$color-night: #242525;
 
 
-$color-light: #fafafa;
 
-/* ------------------------------------------------------------ */
-/* TYPOGRAPHIE */
-/* ------------------------------------------------------------ */
+
+
+// ------------------------------------------------------------
+// TYPOGRAPHIE
+// ------------------------------------------------------------
+// font Primary --------------
 $font-primary: 'apercu', sans-serif;
 $font-primary-light: 'aperculight';
+
+// font Secondary-------------
 $font-secondary: 'smallcaps', serif;

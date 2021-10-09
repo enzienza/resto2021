@@ -1,0 +1,18 @@
+// main: ../_layout.scss
+
+.dark{
+  background: $color-dark;
+  color: $color-light;
+
+  footer{
+    background: $color-night;
+  }
+
+  .info{
+    background: $color-night;
+  }
+
+  .label{
+    background: darken($color-dark, 20%);
+  }
+}

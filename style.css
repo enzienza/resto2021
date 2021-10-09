@@ -10,12 +10,6 @@ Text Domain: pekinparis
 copyright : Enza ©2021
 Tags:
 */
-/* ------------------------------------------------------------ */
-/* COLOR */
-/* ------------------------------------------------------------ */
-/* ------------------------------------------------------------ */
-/* TYPOGRAPHIE */
-/* ------------------------------------------------------------ */
 /**
  * BOX-SIZING
  * @type {[type]}
@@ -373,6 +367,54 @@ img {
   margin-left: 0;
 }
 
+.switcher-mode {
+  position: fixed;
+  bottom: 1.5em;
+  left: 1.5em;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.label {
+  background: #4d4d4d;
+  position: relative;
+  border-radius: 50px;
+  height: 26px;
+  width: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: scale(1.5);
+}
+
+.label .ball {
+  background: #fafafa;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.fa-moon {
+  color: #fafafa;
+}
+
+.fa-sun {
+  color: #fafafa;
+}
+
 .table-horaire {
   font-size: smaller;
   width: 75%;
@@ -404,6 +446,29 @@ img {
 
 .table-horaire .hour-item {
   padding: 0 .5em;
+}
+
+.body {
+  background: #fafafa;
+  color: #333;
+  transition: all 0.2s linear;
+}
+
+.dark {
+  background: #333;
+  color: #fafafa;
+}
+
+.dark footer {
+  background: #242525;
+}
+
+.dark .info {
+  background: #242525;
+}
+
+.dark .label {
+  background: black;
 }
 
 footer {
