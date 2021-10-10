@@ -4,4 +4,8 @@
   background: $color-light;
   color: $color-dark;
   transition: all 0.2s linear;
+
+  .error-desc{
+    color:lighten($color-dark, 10%);
+  }
 }

@@ -551,6 +551,8 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
   background: #fafafa;
   color: #333;
   transition: all 0.2s linear; }
+  .body .error-desc {
+    color: #4d4d4d; }
 
 .dark {
   background: #333;
@@ -561,6 +563,14 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
     background: #242525; }
   .dark .label {
     background: black; }
+  .dark .reservation {
+    color: #F5A623;
+    text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
+  .dark .error-code {
+    color: #4d4d4d;
+    text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
+  .dark .error-desc {
+    color: gray; }
 
 footer {
   background: #333;
@@ -575,6 +585,61 @@ footer {
     color: #7b7b7b; }
     footer a:hover {
       color: #f7ba54; }
+
+.error {
+  margin: 0 auto;
+  text-align: center;
+  padding: 3%;
+  padding-top: 10%; }
+  .error-code {
+    bottom: 60%;
+    color: #2d353c;
+    font-size: 7em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-family: "bodoni"; }
+  .error .text-hightlight {
+    font-family: "smallcaps", serif;
+    font-weight: normal; }
+  .error-desc {
+    font-size: 12px; }
+    .error-desc p {
+      margin: 2% 15% 5%; }
+  .error a {
+    margin-top: 1em;
+    color: #F5A623;
+    border: 1px solid #F5A623;
+    padding: 1em;
+    border-radius: 5px; }
+    .error a:hover {
+      background-color: #f6b03b;
+      color: #fafafa; }
+  @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
+    .error {
+      padding-top: 10%;
+      padding-bottom: 3em; } }
+  @media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+    .error {
+      padding-top: 10%;
+      padding-bottom: 3em; }
+      .error .text-hightlight {
+        padding-bottom: .5em;
+        line-height: 1;
+        font-size: xx-large; }
+      .error-desc p {
+        margin: 5%;
+        margin-bottom: 10%; } }
+  @media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+    .error {
+      padding-top: 10%;
+      padding-bottom: 3em; }
+      .error .text-hightlight {
+        padding-bottom: .5em;
+        line-height: 1;
+        font-size: xx-large; }
+      .error-desc p {
+        margin-bottom: 15%;
+        margin-top: 5%; } }
 
 .air {
   padding: 2em 0; }
@@ -757,5 +822,99 @@ footer {
 
 .info-foncer, .footer-foncer {
   background-color: #262626; }
+
+.reservation {
+  color: #F5A623;
+  padding: 3em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .reservation ul {
+    margin: 0; }
+  .reservation .group-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: "smallcaps", serif;
+    border: 1px solid #F5A623;
+    border-radius: 1em;
+    padding: 2em; }
+  .reservation .group-item p {
+    margin: 0; }
+
+.reserve-icon {
+  margin-right: 2rem;
+  font-size: 3rem; }
+.reserve-info {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center; }
+.reserve-message {
+  font-size: x-large;
+  text-transform: uppercase;
+  letter-spacing: 3px; }
+.reserve-phone {
+  text-align: center;
+  font-size: x-large;
+  letter-spacing: 2px;
+  line-height: 2;
+  font-family: "bodoni"; }
+
+@media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
+  .reservation .content {
+    margin: 3em auto; }
+
+  .reserve-image {
+    margin-right: 3em; }
+    .reserve-image .miniature {
+      width: 6em; } }
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .reservation .content {
+    margin: 2em auto; }
+  .reservation .group-list {
+    display: block;
+    text-align: center; }
+
+  .reserve-image {
+    margin: 1em; }
+    .reserve-image .miniature {
+      width: 6em; }
+  .reserve-info {
+    display: block; }
+  .reserve-message {
+    font-size: x-large; }
+  .reserve-phone {
+    font-size: large; } }
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .reservation {
+    margin: 15px; }
+    .reservation .content {
+      margin: 3em auto; }
+    .reservation .group-list {
+      display: block;
+      text-align: center; }
+
+  .reserve-image {
+    margin: 0; }
+    .reserve-image .miniature {
+      width: 5em; }
+  .reserve-info {
+    display: block; }
+  .reserve-message {
+    letter-spacing: 2px;
+    font-size: larger;
+    line-height: 2; }
+  .reserve-phone {
+    font-size: medium; } }
 
 /*# sourceMappingURL=style.css.map */

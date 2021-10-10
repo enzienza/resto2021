@@ -15,4 +15,19 @@
   .label{
     background: darken($color-dark, 20%);
   }
+
+  .reservation{
+    color: $color-primary;
+    text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
+  }
+
+  .error{
+    &-code{
+      color: lighten($color-dark, 10%);
+      text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
+    }
+    &-desc{
+      color:lighten($color-dark, 30%);
+    }
+  }
 }

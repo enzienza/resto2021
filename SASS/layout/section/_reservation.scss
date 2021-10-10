@@ -1,0 +1,147 @@
+// main: ../_layout.scss
+
+.reservation{
+    color: $color-primary;
+    padding: 3em 0;
+    @include flex;
+    @include justify-content(center);
+
+    //.content{
+    //    margin: 3em auto;
+    //    border-radius: 5px;
+    //    padding: 1em;
+    //    border: 1px solid lighten($color-grey, 30%);
+    //}
+
+    ul{
+        margin: 0;
+    }
+
+    .group{
+        &-list{
+            @include flex;
+            @include justify-content(center);
+            font-family: $font-secondary;
+            border: 1px solid $color-primary;
+            border-radius: 1em;
+            padding: 2em;
+        }
+
+        &-item{
+            p{
+                margin: 0;
+            }
+        }
+    }
+}
+
+.reserve{
+
+    &-icon{
+        margin-right: 2rem;
+        font-size: 3rem;
+
+    }
+
+    &-info{
+        display: -ms-grid;
+        display: grid;
+        @include justify-content(center);
+        @include align-content(center);
+    }
+
+    &-message{
+        font-size: x-large;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    &-phone{
+        text-align: center;
+        font-size: x-large;
+        letter-spacing: 2px;
+        line-height: 2;
+        font-family: $font-number;
+    }
+}
+
+@include responsive(MD){
+    .reservation {
+        .content {
+            margin: 3em auto;
+        }
+    }
+
+    .reserve{
+        &-image{
+            margin-right: 3em;
+            .miniature{
+                width: 6em;
+            }
+        }
+    }
+}
+
+@include responsive(SM){
+    .reservation{
+        .content{
+            margin: 2em auto;
+        }
+        .group-list{
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .reserve{
+        &-image{
+            margin: 1em;
+            .miniature{
+                width: 6em;
+            }
+        }
+        &-info{
+            display: block;
+        }
+        &-message{
+            font-size: x-large;
+        }
+        &-phone{
+            font-size: large;
+        }
+    }
+}
+
+@include responsive(XS){
+    .reservation{
+        margin: 15px;
+        .content{
+            margin: 3em auto;
+        }
+
+        .group-list{
+            display: block;
+            text-align: center;
+            //padding: 1em 0;
+        }
+    }
+
+    .reserve{
+        &-image{
+            margin: 0;
+            .miniature{
+                width: 5em;
+            }
+        }
+        &-info{
+            display: block;
+        }
+        &-message{
+            letter-spacing: 2px;
+            font-size: larger;
+            line-height: 2;
+        }
+        &-phone{
+            font-size: medium;
+        }
+    }
+}

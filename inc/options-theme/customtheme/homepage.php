@@ -140,7 +140,7 @@ class pekinparis_homepage{
             'image_hero_homepage',
             [self::class, 'handle_file_image_hero']
         );
-        register_setting(self::SUB1_GROUP, 'add_logo_homepage');
+        register_setting(self::SUB1_GROUP, 'add_logo_hero_homepage');
         register_setting(self::SUB1_GROUP, 'add_message_hero_homepage');
         register_setting(self::SUB1_GROUP, 'message_hero_homepage');
 
@@ -210,9 +210,35 @@ class pekinparis_homepage{
       );
 
       // -> ajouter les éléments du formulaire
+        add_settings_field(
+            'hidden_reservation_homepage',                      // SLUG_FIELD
+            'Cacher la section',                                // LABEL
+            [self::class,'field_hidden_reservation_homepage'],  // CALLBACK
+            self::SUB1_GROUP,                                   // SLUG_PAGE
+            self::SECTION_RESERVATION                           // SLUG_SECTION
+        );
+
+        add_settings_field(
+            'element_reservation_homepage',                     // SLUG_FIELD
+            'Ce qui doit être présent',                         // LABEL
+            [self::class,'field_element_reservation_homepage'], // CALLBACK
+            self::SUB1_GROUP,                                   // SLUG_PAGE
+            self::SECTION_RESERVATION                           // SLUG_SECTION
+        );
+        add_settings_field(
+            'message_reservation_homepage',                     // SLUG_FIELD
+            'Gestion d\'un message',                            // LABEL
+            [self::class,'field_message_reservation_homepage'], // CALLBACK
+            self::SUB1_GROUP,                                   // SLUG_PAGE
+            self::SECTION_RESERVATION                           // SLUG_SECTION
+        );
+
 
       // -> Sauvegarder les champs
-
+        register_setting(self::SUB1_GROUP, 'hidden_reservation_homepage');
+        register_setting(self::SUB1_GROUP, 'add_icon_reservation_homepage');
+        register_setting(self::SUB1_GROUP, 'add_phone_reservation_homepage');
+        register_setting(self::SUB1_GROUP, 'message_reservation_homepage');
 
     }
 
@@ -295,17 +321,17 @@ class pekinparis_homepage{
         <?php
      }
      public static function field_element_hero(){
-         $add_logo_homepage = esc_attr(get_option('add_logo_homepage'));
+         $add_logo_hero_homepage = esc_attr(get_option('add_logo_hero_homepage'));
          ?>
          <p class="description">
              Cocher ce qui doit être présent sur l'image (par-dessus)
          </p>
          <p>
              <input type="checkbox"
-                    id="add_logo_homepage"
-                    name="add_logo_homepage"
+                    id="add_logo_hero_homepage"
+                    name="add_logo_hero_homepage"
                     value="1"
-                 <?php checked(1, $add_logo_homepage, true); ?>
+                 <?php checked(1, $add_logo_hero_homepage, true); ?>
              />
              <label for="">Ajouter le logo</label>
          </p>
@@ -378,7 +404,58 @@ class pekinparis_homepage{
      }
 
     // DISPLAY SECTION 3 : SECTION_RESERVATION ============================
+    public static function field_hidden_reservation_homepage(){
+        $hidden_reservation_homepage = esc_attr(get_option('hidden_reservation_homepage'));
+         ?>
+            <input type="checkbox"
+                   id="hidden_reservation_homepage"
+                   name="hidden_reservation_homepage"
+                   value="1"
+                   <?php checked(1, $hidden_reservation_homepage, true) ?>
+            />
+        <label for="">Masquer cette section de la page dédier aux cartes</label>
+        <?php
+    }
+    public static function field_element_reservation_homepage(){
+         $add_icon_reservation_homepage = esc_attr(get_option('add_icon_reservation_homepage'));
+         $add_phone_reservation_homepage = esc_attr(get_option('add_phone_reservation_homepage'));
+         ?>
+        <p class="description">Cocher ce qui doit être présent dans la section</p>
+        <p class="">
+            <input type="checkbox"
+                   id="add_icon_reservation_homepage"
+                   name="add_icon_reservation_homepage"
+                   value="1"
+                <?php checked(1, $add_icon_reservation_homepage, true) ?>
+            />
+            <label for="">Ajouter une icon</label>
+        </p>
+        <p class="">
+            <input type="checkbox"
+                   id="add_phone_reservation_homepage"
+                   name="add_phone_reservation_homepage"
+                   value="1"
+                <?php checked(1, $add_phone_reservation_homepage, true) ?>
+            />
+            <label for="">Ajouter le numéro de téléphone</label>
+        </p>
 
+        <?php
+    }
+    public static function field_message_reservation_homepage(){
+        $message_reservation_homepage = esc_attr(get_option('message_reservation_homepage'));
+         ?>
+        <p>Ajouter le texte souhaiter</p>
+        <p class="height-space">
+            <input type="text"
+                   id="message_reservation_homepage"
+                   name="message_reservation_homepage"
+                   value="<?php echo $message_reservation_homepage ?>"
+                   class="large-text"
+            />
+        </p>
+        <?php
+    }
 
      /**
      * 9 - AJOUT STYLE ET SCRIPT

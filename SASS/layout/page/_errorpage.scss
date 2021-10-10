@@ -1,0 +1,81 @@
+// main: ../_layout.scss
+
+
+.error{
+    margin: 0 auto;
+    text-align: center;
+    padding: 3%;
+    padding-top: 10%;
+
+    &-code{
+        bottom: 60%;
+        color: #2d353c;
+        font-size: 7em;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        font-family: $font-number;
+    }
+
+    .text-hightlight{
+        font-family: $font-secondary;
+        font-weight: normal;
+    }
+
+    &-desc{
+        font-size: 12px;
+        p{
+            margin: 2% 15% 5%;
+        }
+    }
+
+    a{
+        margin-top: 1em;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        padding: 1em;
+        border-radius: 5px;
+        &:hover{
+            background-color: lighten($color-primary, 5%);
+            color: $color-light;
+        }
+    }
+
+    @include responsive(MD){
+        padding-top: 10%;
+        padding-bottom: 3em;
+    }
+
+    @include responsive(SM){
+        padding-top: 10%;
+        padding-bottom: 3em;
+
+        .text-hightlight{
+            padding-bottom: .5em;
+            line-height: 1;
+            font-size: xx-large;
+        }
+        &-desc{
+            p{
+                margin: 5%;
+                margin-bottom: 10%;
+            }
+        }
+    }
+
+    @include responsive(XS){
+        padding-top: 10%;
+        padding-bottom: 3em;
+
+        .text-hightlight{
+            padding-bottom: .5em;
+            line-height: 1;
+            font-size: xx-large;
+        }
+        &-desc{
+            p{
+                margin-bottom: 15%;
+                margin-top: 5%;
+            }
+        }
+    }
+}
