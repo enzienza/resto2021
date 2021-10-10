@@ -1,0 +1,129 @@
+// main: ../_layout.scss
+
+.filter{
+    height: 90vh;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    @include radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
+    @include flex;
+    @include justify-content(center);
+    @include align-content(center);
+}
+.hero, .hero-bg {
+    height: 90vh;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.jumb {
+    &-hero {
+        @include flex;
+        @include justify-content(center);
+        @include align-content(center);
+        @include align-items(baseline);
+        @include flex-wrap(wrap);
+
+        .logo{
+            //width: 14em;
+            width: calc(100% - 30%);
+            height: auto;
+            @include filter-invert(1);
+        }
+    }
+
+    &-message{
+        @include flex;
+        @include justify-content(center);
+        @include align-items(center);
+        text-align: center;
+        font-size: 2em;
+        color: $color-light;
+        text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+    }
+
+    &-title{
+        @include flex;
+        @include align-items(center);
+        text-align: center;
+        color: $color-light;
+        margin: auto 15%;
+
+        .miniature{
+            width: 14em;
+            @include filter-invert(1);
+        }
+
+        .msg-hero{
+            font-size: 1.3em;
+            text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+        }
+    }
+}
+
+@include responsive(MD){
+    .jumb{
+        &-hero{
+            .logo{
+                width: 50%;
+            }
+        }
+        &-message{
+            font-size: x-large;
+            padding: 2em;
+        }
+        &-title{
+            .msg-hero{
+                padding-top: 2em;
+            }
+        }
+    }
+}
+
+
+@include responsive(SM){
+    .jumb{
+        &-hero{
+            .logo{
+                width: 30%;
+            }
+        }
+        &-message{
+            font-size: large;
+        }
+        &-title{
+            .miniature{
+                width: 20%;
+            }
+            .msg-hero{
+                font-size: smaller;
+            }
+        }
+    }
+}
+
+@include responsive(XS){
+    .jumb{
+        &-hero{
+            .logo{
+                width: 70%;
+            }
+        }
+        &-message{
+            font-size: larger;
+            padding: 1em;
+        }
+        &-title{
+            .miniature{
+                width: 50%;
+            }
+            .msg-hero{
+                font-size: large;
+                padding-top: 2em;
+            }
+        }
+    }
+}

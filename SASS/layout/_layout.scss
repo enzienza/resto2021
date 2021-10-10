@@ -4,7 +4,6 @@
 @import './theme/lightMode';
 @import './theme/darkMode';
 
-
 // BODY -----------------------------
 // @import "./body/header";
 // @import "./body/main";
@@ -13,11 +12,9 @@
 
 
 // SECTION --------------------------
-// @import "./section/hero";
+@import "./section/allSection";
+@import "./section/hero";
 // @import "./section/event";
 @import "./section/info";
 // @import "./section/reservation";
 
-main{
-  height: 100vh;
-}

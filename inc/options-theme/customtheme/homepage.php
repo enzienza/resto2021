@@ -135,14 +135,14 @@ class pekinparis_homepage{
 
 
       // -> Sauvegarder les champs
-      // register_setting(self::SUB1_GROUP, 'homepage_add_image_hero');
-      // register_setting(self::SUB1_GROUP,
-      //     'homepage_image_hero',
-      //     [self::class, 'handleFileImage_hero_homepage']
-      // );
-      // register_setting(self::SUB1_GROUP, 'homepage_add_logo_hero');
-      // register_setting(self::SUB1_GROUP, 'homepage_add_message_hero');
-      // register_setting(self::SUB1_GROUP, 'homepage_message_hero');
+      register_setting(self::SUB1_GROUP, 'add_image_hero_homepage');
+        register_setting(self::SUB1_GROUP,
+            'image_hero_homepage',
+            [self::class, 'handle_file_image_hero']
+        );
+        register_setting(self::SUB1_GROUP, 'add_logo_homepage');
+        register_setting(self::SUB1_GROUP, 'add_message_hero_homepage');
+        register_setting(self::SUB1_GROUP, 'message_hero_homepage');
 
 
 
@@ -163,8 +163,36 @@ class pekinparis_homepage{
       );
 
       // -> ajouter les éléments du formulaire
+        add_settings_field(
+            'title_homepage',                       // SLUG_FIELD
+            'Ajouter un titre',                     // LABEL
+            [self::class,'field_title_homepage'],   // CALLBACK
+            self::SUB1_GROUP,                       // SLUG_PAGE
+            self::SECTION_TITLE                     // SLUG_SECTION
+        );
+
+        add_settings_field(
+            'msg_page_homepage',                        // SLUG_FIELD
+            'Gestion d\'un message d\'introduction',    // LABEL
+            [self::class,'field_msg_page_homepage'],    // CALLBACK
+            self::SUB1_GROUP,                           // SLUG_PAGE
+            self::SECTION_TITLE                         // SLUG_SECTION
+        );
+
+        add_settings_field(
+            'main_msg_homepage',                       // SLUG_FIELD
+            'Message principal',                     // LABEL
+            [self::class,'field_main_msg_homepage'],   // CALLBACK
+            self::SUB1_GROUP,                       // SLUG_PAGE
+            self::SECTION_TITLE                     // SLUG_SECTION
+        );
 
       // -> Sauvegarder les champs
+        register_setting(self::SUB1_GROUP, 'title_homepage');
+        register_setting(self::SUB1_GROUP, 'add_msg_page_homepage');
+        register_setting(self::SUB1_GROUP, 'msg_page_homepage');
+        register_setting(self::SUB1_GROUP, 'main_msg_homepage');
+
 
       /**
        * SECTION 3 : SECTION_RESERVATION ============================
@@ -191,11 +219,11 @@ class pekinparis_homepage{
     /**
      * 6 - DEFINIR LES SECTIONS DE LA PAGE
      */
-     // DISPLAY SECTION 1 : SECTION_HERO ==================================
+    // DISPLAY SECTION 1 : SECTION_HERO ===================================
     public static function display_section_hero(){
         ?>
             <p class="section-description">
-                Cetter partie est dédié à la gestion de la bannière
+                Cetter partie est dédié à la gestion de la bannière de la page
             </p>
         <?php
     }
@@ -223,27 +251,136 @@ class pekinparis_homepage{
      * 7 - DEFINIR LE TELECHARGEMENT DES FICHIER
      *     le fichier sera stocké dans le dossier upload
      */
-     // public static function handleFileImage_hero_homepage(){
-     //   if(!empty($_FILES['homepage_image_hero']['tmp_name'])){
-     //       $urls = wp_handle_upload($_FILES['homepage_image_hero'], array('test_form' => FALSE));
-     //       $temp = $urls['url'];
-     //       return $temp;
-     //   } // end -> if(!empty($_FILES['image_hero']['tmp_name']))
-     //
-     //   //no upload. old file url is the new value.
-     //   return get_option('homepage_image_hero');
-     // }
+     public static function handle_file_image_hero(){
+        if(!empty($_FILES['image_hero_homepage']['tmp_name'])){
+            $urls = wp_handle_upload($_FILES['image_hero_homepage'], array('test_form' => FALSE));
+            $temp = $urls['url'];
+            return $temp;
+        } // end -> if(!empty($_FILES['image_hero']['tmp_name']))
+
+        //no upload. old file url is the new value.
+        return get_option('image_hero_homepage');
+    }
 
 
     /**
      * 8 - DEFINIR LES CHAMPS POUR RECUPERER LES INFOS
      */
+    // DISPLAY SECTION 1 : SECTION_HERO ===================================
+     public static function field_image_hero(){
+       $add_image_hero_homepage = esc_attr(get_option('add_image_hero_homepage'));
+        ?>
+        <div>
+            <input type="checkbox"
+                   id="add_image_hero_homepage"
+                   name="add_image_hero_homepage"
+                   value="1"
+                   <?php checked(1, $add_image_hero_homepage, true); ?>
+            />
+            <label class="info" for="">Ajouter l'image comme arrière plan</label>
+        </div>
+        <div class="height-space">
+            <input type="file"
+                   id="image_hero_homepage"
+                   name="image_hero_homepage"
+                   value="<?php echo get_option('image_hero_homepage'); ?>"
+            />
+        </div>
+        <div>
+            <img src="<?php echo get_option('image_hero_homepage'); ?>"
+                 class="img-hero"
+                 alt=""
+            />
+        </div>
+        <?php
+     }
+     public static function field_element_hero(){
+         $add_logo_homepage = esc_attr(get_option('add_logo_homepage'));
+         ?>
+         <p class="description">
+             Cocher ce qui doit être présent sur l'image (par-dessus)
+         </p>
+         <p>
+             <input type="checkbox"
+                    id="add_logo_homepage"
+                    name="add_logo_homepage"
+                    value="1"
+                 <?php checked(1, $add_logo_homepage, true); ?>
+             />
+             <label for="">Ajouter le logo</label>
+         </p>
+         <?php
+     }
+     public static function field_message_hero(){
+         $add_message_hero_homepage = esc_attr(get_option('add_message_hero_homepage'));
+         $message_hero_homepage = esc_attr(get_option('message_hero_homepage'));
+         ?>
+         <p class="description">
+             Ajouter un message par-dessus l'image d'arrière plan
+         </p>
+         <div class="height-space">
+             <input type="checkbox"
+                    id="add_message_hero_homepage"
+                    name="add_message_hero_homepage"
+                    value="1"
+                 <?php checked(1, $add_message_hero_homepage, true); ?>
+             />
+             <label for="">Ajouter le texte souhaiter</label>
+             <textarea name="message_hero_homepage" id="message_hero_homepage" class="large-text code"><?php echo $message_hero_homepage ?></textarea>
+         </div>
+         <?php
+     }
 
-     public static function field_image_hero(){}
-     public static function field_element_hero(){}
-     public static function field_message_hero(){}
+    // DISPLAY SECTION 2 : SECTION 2 : SECTION_TITLE ======================
+     public static function field_title_homepage(){
+         $title_homepage = esc_attr(get_option('title_homepage'));
+         ?>
+         <input type="text"
+                id="title_homepage"
+                name="title_homepage"
+                value="<?php echo $title_homepage ?>"
+                class="large-text"
+         />
+         <?php
+     }
+     public static function field_msg_page_homepage(){
+         $add_msg_page_homepage = esc_attr(get_option('add_msg_page_homepage'));
+         $msg_page_homepage = esc_attr(get_option('msg_page_homepage'));
+         ?>
+         <p class="description">
+             Ajouter un description à la section
+         </p>
+         <div class="height-space">
+             <input type="checkbox"
+                    id="add_msg_page_homepage"
+                    name="add_msg_page_homepage"
+                    value="1"
+                    <?php checked(1, $add_msg_page_homepage, true) ?>
+             />
+             <label for="">Ajouter le texte souhaiter</label>
+             <textarea name="msg_page_homepage" id="msg_page_homepage" class="large-text code"><?php echo $msg_page_homepage ?></textarea>
+         </div>
+         <?php
+     }
+     public static function field_main_msg_homepage(){
+         $main_msg_homepage = esc_attr(get_option('main_msg_homepage'));
+         ?>
+         <p class="description">
+             Ajouter un message pour inciter la clientèle cliquer sur le menu
+         </p>
+         <input type="text"
+                id="main_msg_homepage"
+                name="main_msg_homepage"
+                value="<?php echo $main_msg_homepage ?>"
+                class="large-text"
+         />
+         <?php
+     }
 
-    /**
+    // DISPLAY SECTION 3 : SECTION_RESERVATION ============================
+
+
+     /**
      * 9 - AJOUT STYLE ET SCRIPT
      */
 
