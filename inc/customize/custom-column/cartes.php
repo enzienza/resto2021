@@ -1,26 +1,19 @@
 <?php
 /**
+ * Name file:   column-suggestion
  *
- * Name file: custom-columns
- * Description: File for customize the administration columns of Custom Post-Types
+ * Description: file that customizes the theme
  *
  * @package WordPress
- * @subpackage pekinperis
- * @since 2.0
+ * @subpackage avimayeur
+ * @version 1.0
  */
 
-/**
- *  ----- INDEX -----
- *
- * 1 - ADMIN POST-TYPE : BUFFET
- * 2 - ADMIN POST-TYPE : CARTES
- * 3 - ADMIN POST-TYPE : EMPORTERS
- */
 
 /**
- * 2 - ADMIN POST-TYPE : CARTES
+ *  Step 1
+ *  [Ajouter les columns]
  */
-/* Etape 1 : ajouter les colonnes */
 add_filter(
 	'manage_cartes_posts_columns',
 	function($columns){
@@ -34,7 +27,10 @@ add_filter(
 	}
 );
 
-/* Etape 2 : afficher le contenu souhaiter */
+/**
+ *  Step 2
+ *  [Afficher le contenu souhaiter]
+ */
 add_filter(
 	'manage_cartes_posts_custom_column',
 	function($column, $postId){

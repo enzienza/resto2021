@@ -29,7 +29,7 @@ require_once ('inc/customize/config-admin.php');
 require_once ('inc/customize/custom-dashboard.php');
 
 /* customize columns */
-require_once ('inc/customize/custom-column.php');
+require_once ('inc/customize/custom-column/cartes.php');
 
 
 /* customize front-end */
