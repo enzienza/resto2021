@@ -89,8 +89,47 @@
 </section>
 
 <section class="container">
-	<p>Section dédier au la carte</p>
-	<?php echo get_option("main_msg_takeawaypage") ?>
+    <ul class="nav nav-tabs">
+		<?php
+		wp_reset_postdata();
+
+		$args = array(
+			'post_type'      => 'emportes',
+			'posts_per_page' => -1,
+			'orderby'        => 'id',
+			'order'          => 'ASC'
+		);
+		$my_query = new WP_query($args);
+		if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+			?>
+			<?php get_template_part('template-parts/tabs/filter-icons') ?>
+		<?php endwhile; endif;  wp_reset_postdata(); ?>
+    </ul>
+
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active">
+            <p class="else-display">
+	            <?php echo get_option("main_msg_takeawaypage") ?>
+            </p>
+        </div>
+		<?php
+		wp_reset_postdata();
+
+		$args = array(
+			'post_type'      => 'emportes',
+			'posts_per_page' => -1,
+			'orderby'        => 'id',
+			'order'          => 'ASC'
+		);
+		$my_query = new WP_query($args);
+		if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+			?>
+			<?php get_template_part('template-parts/tabs/tab-content') ?>
+		<?php endwhile; endif;  wp_reset_postdata(); ?>
+
+    </div>
+	
 </section>
 
 <?php if(checked(1, get_option('hidden_reservation_takeawaypage'), false)): else: ?>

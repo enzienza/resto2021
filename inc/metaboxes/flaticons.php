@@ -24,7 +24,7 @@ class MB_use_faticons{
 	const META_KEY = 'icon_flaticon';
 	const NONCE    = '_icon_flaticon';
 	const TITLE_MB = 'Flaticon';
-	const SCREEN = array('cartes');
+	const SCREEN = array('cartes', 'emportes');
 
 	// define('SCREEN',['carte']);
 

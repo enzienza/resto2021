@@ -30,6 +30,7 @@ require_once ('inc/customize/custom-dashboard.php');
 
 /* customize columns */
 require_once ('inc/customize/custom-column/cartes.php');
+require_once ('inc/customize/custom-column/emportes.php');
 
 
 /* customize front-end */
@@ -62,6 +63,7 @@ require_once ('inc/options-theme/customtheme/errorpage.php');
  */
 require_once ('inc/post-type/buffet.php');
 require_once ('inc/post-type/cartes.php');
+require_once ('inc/post-type/emportes.php');
 
 
 /** =====================================================
