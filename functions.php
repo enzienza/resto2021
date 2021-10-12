@@ -29,7 +29,7 @@ require_once ('inc/customize/config-admin.php');
 require_once ('inc/customize/custom-dashboard.php');
 
 /* customize columns */
-
+require_once ('inc/customize/custom-column.php');
 
 
 /* customize front-end */
@@ -38,7 +38,7 @@ require_once ('inc/customize/custom-dashboard.php');
 /** =====================================================
  *  2 - METABOXES
  */
-
+require_once ('inc/metaboxes/flaticons.php');
 
 /** =====================================================
  *  3 - OPTIONS-THEME
@@ -60,7 +60,7 @@ require_once ('inc/options-theme/customtheme/errorpage.php');
 /** =====================================================
  *  4 - POST-TYPE
  */
-
+require_once ('inc/post-type/cartes.php');
 
 
 /** =====================================================

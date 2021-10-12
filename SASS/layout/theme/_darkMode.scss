@@ -16,9 +16,27 @@
     background: darken($color-dark, 20%);
   }
 
+  .nav-tabs{
+    text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
+
+    .tab-pane{
+      text-shadow: 4px 2px 4px rgba(9, 9, 9, .9);
+    }
+  }
+
+  .tab-content{
+    @include box-shadow(0 0 10px rgba(0, 0, 0, .3));
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+
   .reservation{
     color: $color-primary;
     text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
+    p{
+      text-shadow: 4px 2px 4px rgba(9, 9, 9, .9);
+    }
   }
 
   .error{
