@@ -1,0 +1,26 @@
+// main: ../_elements.scss
+
+.wp-block-image{
+    text-align: center;
+    width: 100%;
+    img{
+        width: auto;
+        height: auto;
+        @include box-shadow(0 7px 10px -5px rgba(9, 9, 9, 0.9));
+
+        @include responsive(MD){
+            width: 100%;
+            height: auto;
+        }
+
+        @include responsive(SM){
+            width: 100%;
+            height: auto;
+        }
+
+        @include responsive(XS){
+            width: 100%;
+            height: auto;
+        }
+    }
+}

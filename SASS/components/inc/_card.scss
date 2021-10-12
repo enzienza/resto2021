@@ -1,0 +1,7 @@
+// main: ../_components.scss
+
+.thumbnail img{
+    border-radius: .5em;
+    //@include box-shadow(0 0 10px rgba(0, 0, 0, .8));
+    @include box-shadow(0 .5rem 1rem rgba(0,0,0,.15));
+}

@@ -319,6 +319,22 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
 .flaticon-coffee-cup:before {
   content: "\f138"; }
 
+.thumbnail img {
+  border-radius: .5em;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem; }
+.modal-title {
+  margin: 0.5rem;
+  line-height: 1.5; }
+.modal-dialog {
+  max-width: calc(100vw - 30%); }
+
 .navbar {
   font-family: "smallcaps", serif;
   letter-spacing: 1px;
@@ -756,6 +772,38 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
   .flip-medium::before {
     left: 180px;
     width: 80px; }
+
+.wp-block-image {
+  text-align: center;
+  width: 100%; }
+  .wp-block-image img {
+    width: auto;
+    height: auto;
+    -webkit-box-shadow: 0 7px 10px -5px rgba(9, 9, 9, 0.9);
+    box-shadow: 0 7px 10px -5px rgba(9, 9, 9, 0.9); }
+    @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
+      .wp-block-image img {
+        width: 100%;
+        height: auto; } }
+    @media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+      .wp-block-image img {
+        width: 100%;
+        height: auto; } }
+    @media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+      .wp-block-image img {
+        width: 100%;
+        height: auto; } }
+
+.wp-block-file__button {
+  background: none !important;
+  border: 1px solid #F5A623;
+  color: #F5A623 !important;
+  letter-spacing: 2px; }
+  .wp-block-file__button a:hover {
+    background: none !important; }
+  .wp-block-file__button:hover {
+    background: #f7ba54 !important;
+    color: #fafafa !important; }
 
 .body {
   background: #fafafa;

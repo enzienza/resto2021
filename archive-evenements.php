@@ -89,8 +89,45 @@
 </section>
 
 <section class="container">
-	<p>Section dédier au la carte</p>
-	<?php echo get_option("main_msg_eventpage") ?>
+    <div class="row">
+        <?php
+            wp_reset_postdata();
+
+            $args = array(
+                'post_type'      => 'evenements',
+                'posts_per_page' => -1,
+                'orderby'        => 'id',
+                'order'          => 'ASC'
+            );
+            $my_query = new WP_query($args);
+            if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+        ?>
+                <!-- Button trigger modal -->
+            <div class="col-md-4 col-12 thumbnail" data-toggle="modal" data-target="#eventModal">
+	            <?php the_post_thumbnail(); ?>
+            </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="eventModalLabel">
+                            <?php the_title() ?>
+                        </h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+	                    <?php the_content() ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	    <?php endwhile; endif;  wp_reset_postdata(); ?>
+    </div>
 </section>
 
 <?php if(checked(1, get_option('hidden_reservation_eventpage'), false)): else: ?>

@@ -1,5 +1,7 @@
 // main: ../style.scss
 
+
+// elements page/layout -----------------------
 // @import "./inc/box";
 // @import "./inc/button";
 // @import "./inc/container";
@@ -15,3 +17,8 @@
 // @import "./inc/tag";
 // @import "./inc/timeline";
 @import "./inc/flip";
+
+
+// element WordPress / Gutenberg ----------------
+@import "./WP/block-image";
+@import "./WP/block-file";

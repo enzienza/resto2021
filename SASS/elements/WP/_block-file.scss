@@ -1,0 +1,18 @@
+// main: ../_elements.scss
+
+.wp-block-file__button{
+    background: none !important;
+    border: 1px solid $color-primary;
+    color: $color-primary !important;
+    letter-spacing: 2px;
+
+    a:hover{
+        background: none !important;
+    }
+
+    &:hover{
+        background: $color-primary-light !important;
+        color: $color-light !important;
+    }
+}
+

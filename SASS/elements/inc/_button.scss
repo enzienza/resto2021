@@ -1,0 +1,12 @@
+// main: ../_elements.scss
+
+.btn-outline-primary{
+    color: none;
+    border: none;
+    background: none;
+    &:hover{
+        color: none;
+        background: none;
+        border: none;
+    }
+}
