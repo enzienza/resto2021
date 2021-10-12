@@ -17,14 +17,12 @@
     </div><!--//error-code-->
 
     <h1 class="text-hightlight">
-      Nous n'avons pas pu trouver la page ...
+	    <?php echo get_option('maintext_error'); ?>
     </h1><!--//text-hightlight-->
 
     <div class="error-desc">
       <p>
-        Désolé, mais la page que vous recherchez est introuvable ou n'existe pas.
-        Essayez d'actualiser la page ou cliquez sur le bouton ci-dessous
-        pour revenir à la page d'accueil. 
+	      <?php echo get_option('message_error'); ?>
       </p>
       <div>
         <a href="<?php echo esc_url( site_url( '/' ) ); ?>">
