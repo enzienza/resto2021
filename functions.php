@@ -60,6 +60,7 @@ require_once ('inc/options-theme/customtheme/errorpage.php');
 /** =====================================================
  *  4 - POST-TYPE
  */
+require_once ('inc/post-type/buffet.php');
 require_once ('inc/post-type/cartes.php');
 
 

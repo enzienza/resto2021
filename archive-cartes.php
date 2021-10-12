@@ -102,7 +102,7 @@
             $my_query = new WP_query($args);
             if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
         ?>
-            <?php get_template_part('template-parts/tabs/nav-tabs') ?>
+            <?php get_template_part('template-parts/tabs/filter-icons') ?>
         <?php endwhile; endif;  wp_reset_postdata(); ?>
     </ul>
 
