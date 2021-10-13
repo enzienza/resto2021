@@ -28,12 +28,12 @@ Tags:
  *      1 - Style for the login page
  */
 body.login {
-    /* background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), */
-    /* url('../img/avimayeur.jpg') no-repeat fixed; */
-    /* background: -o-radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), */
-    /* url('../img/avimayeur.jpg') no-repeat fixed; */
-    /* background: radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), */
-    /* url('../img/avimayeur.jpg') no-repeat fixed; */
+     background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
+     url('../img/pekinparis.jpg') no-repeat fixed;
+     background: -o-radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
+     url('../img/pekinparis.jpg') no-repeat fixed;
+     background: radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
+     url('../img/pekinparis.jpg') no-repeat fixed;
     background-image: linear-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
     background-size: cover;
     background-position: 50% 50%;
@@ -58,7 +58,7 @@ body.login {
 }
 
 h1 a {
-    /* background: url('../img/logo-login.png') no-repeat !important; */
+     background: url('../img/logo-login.png') no-repeat !important;
     width: 257px !important;
     height: 198px !important;
     filter: invert(0.9);

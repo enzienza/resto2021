@@ -73,7 +73,7 @@ class MB_use_faticons{
             </a>
         </p>
         <label for="<?php echo self::META_KEY ?>">
-            Ajouter la class
+            Ajouter la classe
         </label>
         <input class="widefat"
                style="margin:.6em 0;"

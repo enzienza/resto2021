@@ -3,7 +3,7 @@
 ?>
 
 <?php get_header() ?>
-<main>
+
 
     <section class="hero">
 		<?php if(checked(1, get_option('add_image_hero_homepage'), false)): ?>
@@ -149,5 +149,5 @@
         </section>
 	<?php endif; ?>
 
-</main>
+
 <?php get_footer() ?>
