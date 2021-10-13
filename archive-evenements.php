@@ -88,7 +88,7 @@
 	<?php endif; ?>
 </section>
 
-<section class="container">
+<section class="container post">
     <div class="row">
         <?php
             wp_reset_postdata();

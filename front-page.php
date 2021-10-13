@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * Name file:   front-page
+ * Description: The front page template file
+ *
+ * @package WordPress
+ * @subpackage pekinparis
+ * @version 1.0
+ */
 ?>
 
 <?php get_header() ?>
@@ -82,8 +89,7 @@
 		<?php endif; ?>
     </section>
 
-    <section class="air container">
-		<?php get_template_part("template-parts/posts/buffet") ?>
+    <section class="air container post">
         <ul class="nav nav-tabs">
 		    <?php
                 wp_reset_postdata();
@@ -104,7 +110,7 @@
         <div class="tab-content">
             <div class="tab-pane fade show active">
                 <p class="else-display">
-				    <?php echo get_option('main_msg_cartepage') ?>
+				    <?php echo get_option('main_msg_homepage') ?>
                 </p>
             </div>
 		    <?php

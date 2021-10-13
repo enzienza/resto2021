@@ -88,7 +88,7 @@
     <?php endif; ?>
 </section>
 
-<section class="container">
+<section class="container post">
     <ul class="nav nav-tabs">
         <?php
             wp_reset_postdata();

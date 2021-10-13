@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
 * Name file:   header
 * Description: The header for our theme

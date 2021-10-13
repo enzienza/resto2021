@@ -9,5 +9,4 @@
             <?php echo get_option('main_msg_homepage') ?>
         </div>
     <?php ?>
-
 </div>
