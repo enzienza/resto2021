@@ -59,6 +59,35 @@ Tags: restaurant, buffer, carte, event, takeaway
 
  * @type {(nowrap | wrap | wrap-reverse)}
  */
+@keyframes bounceTop {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-45px); }
+  24% {
+    opacity: 1; }
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px); }
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px); }
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px); }
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px); }
+  25%,
+    55%,
+    75%,
+    87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px); }
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px); } }
 * {
   margin: 0;
   padding: 0; }
@@ -354,7 +383,9 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
     box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4); }
 
 .navbar-nav {
-  font-family: "apercu", sans-serif; }
+  font-family: "smallcaps", serif;
+  font-size: large;
+  letter-spacing: 3px; }
   .navbar-nav .current-menu-item .nav-link {
     display: block; }
     .navbar-nav .current-menu-item .nav-link::before, .navbar-nav .current-menu-item .nav-link::after {
@@ -501,7 +532,8 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
   padding: 1em 0; }
 .tab-content > .active {
   display: block;
-  width: 80%; }
+  width: 80%;
+  margin: auto; }
 .tab-content .tab-pane h2 {
   padding-top: 1em;
   padding-bottom: 0.5em;
@@ -921,11 +953,18 @@ footer {
   letter-spacing: 1px; }
 
 .else-display {
-  font-size: larger;
+  font-size: medium;
   letter-spacing: 3px;
   text-align: center;
   line-height: 2;
-  padding: 2em; }
+  padding: 2em;
+  text-align: center;
+  font-family: "aperculight";
+  border: 2px dashed #db8c0a;
+  border-radius: 15px;
+  width: 60%;
+  margin: auto;
+  animation: bounceTop 2s ease 0s 1 normal forwards; }
 
 .filter {
   height: 90vh;

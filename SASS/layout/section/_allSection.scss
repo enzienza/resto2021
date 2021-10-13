@@ -13,11 +13,20 @@
 }
 
 .else-display{
-    font-size: larger;
+    font-size: medium;
     letter-spacing: 3px;
     text-align: center;
     line-height: 2;
     padding: 2em;
+    text-align: center;
+    font-family: $font-primary-light;
+
+    border: 2px dashed $color-primary-dark;
+    border-radius: 15px;
+    width: 60%;
+    margin: auto;
+
+    animation: bounceTop 2s ease 0s 1 normal forwards;
 }
 
 

@@ -25,7 +25,9 @@
 
 // ul
 .navbar-nav{
-  font-family: $font-primary;
+  font-family: $font-secondary;
+  font-size: large;
+  letter-spacing: 3px;
 
   // <li.current-menu-item> => page current
   .current-menu-item{
