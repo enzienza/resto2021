@@ -35,21 +35,7 @@
 
         <!-- Modal -->
         <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title" id="eventModalLabel">
-                            <?php the_title() ?>
-                        </h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-	                    <?php the_content() ?>
-                    </div>
-                </div>
-            </div>
+            <?php get_template_part("template-parts/posts/modal") ?>
         </div>
 
 	    <?php endwhile; endif;  wp_reset_postdata(); ?>
