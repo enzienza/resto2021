@@ -107,3 +107,60 @@
     }
   }
 }
+
+@include responsive(MD){
+  .navbar{
+    height: auto;
+    background-color: lighten($color-dark, 3%);
+    .navbar-collapse{
+      padding-top: 1em;
+    }
+  }
+  .solid{
+    .navbar-collapse{
+      background: none;
+    }
+  }
+  .nav-item{
+    text-align: center;
+    padding: 1em 0;
+  }
+}
+
+@include responsive(SM){
+  .navbar{
+    height: auto;
+    background-color: lighten($color-dark, 3%);
+    .navbar-collapse{
+      padding-top: 1em;
+    }
+  }
+  .solid{
+    .navbar-collapse{
+      background: none;
+    }
+  }
+  .nav-item{
+    text-align: center;
+    padding: 1em 0;
+  }
+}
+
+@include responsive(XS){
+  .navbar{
+    height: auto;
+    background-color: lighten($color-dark, 3%);
+    .navbar-collapse{
+      padding-top: 1em;
+    }
+  }
+  .solid{
+    .navbar-collapse{
+      background: none;
+    }
+  }
+  .nav-item{
+    text-align: center;
+    padding: 1em 0;
+  }
+}

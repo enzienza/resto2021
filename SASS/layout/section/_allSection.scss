@@ -4,6 +4,11 @@
     padding: 2em 0;
 }
 
+.title-section{
+    letter-spacing: 3px;
+    line-height: 2;
+}
+
 .description{
     text-align: center;
     font-size: larger;
@@ -23,10 +28,42 @@
 
     border: 2px dashed $color-primary-dark;
     border-radius: 15px;
-    width: 60%;
-    margin: auto;
+    //width: 60%;
+    margin: auto 20%;
 
     animation: bounceTop 2s ease 0s 1 normal forwards;
 }
 
 
+@include responsive(MD){
+    .description{
+        padding: 3em;
+        font-size: medium;
+    }
+}
+
+@include responsive(SM){
+    .description{
+        padding: 2em;
+        font-size: medium;
+    }
+
+    .else-display{
+        width: 100%;
+        margin: auto;
+        margin-top: 1em;
+    }
+}
+
+@include responsive(XS){
+    .description{
+        padding: 2em;
+        font-size: medium;
+    }
+
+    .else-display{
+        width: 100%;
+        margin: auto;
+        margin-top: 1em;
+    }
+}

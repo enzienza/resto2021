@@ -4,33 +4,34 @@
   background: $color-dark;
   color: $color-light;
 
+  // footer ------------------------------------
   footer{
     background: $color-night;
   }
-
   .info{
     background: $color-night;
   }
 
+
+  // Switcher ----------------------------------
   .label{
     background: darken($color-dark, 20%);
   }
 
+  // filter / tabs -----------------------------
   .nav-tabs{
     text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
-
     .tab-pane{
       text-shadow: 4px 2px 4px rgba(9, 9, 9, .9);
     }
   }
-
   .tab-content{
     @include box-shadow(0 0 10px rgba(0, 0, 0, .3));
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
   }
 
-
+  // revervation -------------------------------
   .reservation{
     color: $color-primary;
     text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
@@ -39,6 +40,7 @@
     }
   }
 
+  // errorpage ---------------------------------
   .error{
     &-code{
       color: lighten($color-dark, 10%);

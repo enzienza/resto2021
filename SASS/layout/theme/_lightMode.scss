@@ -9,3 +9,9 @@
     color:lighten($color-dark, 10%);
   }
 }
+
+.error404{
+  .navbar{
+    background: $color-dark;
+  }
+}

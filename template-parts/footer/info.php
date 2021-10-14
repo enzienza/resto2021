@@ -15,7 +15,7 @@
     <div class="col-md-4 col-12 block-contact">
       <div>
         <div>
-          <p class="title"><?php bloginfo('title') ?></p>
+          <h3 class="title"><?php bloginfo('title') ?></h3>
 
           <?php if(checked(1, get_option('add_location'), false)): ?>
             <p class="location">
@@ -78,7 +78,7 @@
       />
     </div>
     <div class="col-md-4 col-12 block-horaire">
-      <?php get_template_part('parts/footer/horaire') ?>
+      <?php get_template_part('template-parts/footer/horaire') ?>
     </div>
   </div>
 </div>

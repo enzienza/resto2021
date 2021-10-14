@@ -76,8 +76,10 @@
             padding: 2em;
         }
         &-title{
+            margin: auto 10%;
             .msg-hero{
                 padding-top: 2em;
+                font-family: $font-primary-light;
             }
         }
     }
@@ -95,11 +97,14 @@
             font-size: large;
         }
         &-title{
+            margin: auto 10%;
             .miniature{
+                padding-top: 3em;
                 width: 20%;
             }
             .msg-hero{
                 font-size: smaller;
+                font-family: $font-primary-light;
             }
         }
     }
@@ -117,12 +122,14 @@
             padding: 1em;
         }
         &-title{
+            margin: auto 10%;
             .miniature{
                 width: 50%;
             }
             .msg-hero{
-                font-size: large;
+                font-size: medium;
                 padding-top: 2em;
+                font-family: $font-primary-light;
             }
         }
     }

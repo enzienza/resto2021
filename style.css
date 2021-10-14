@@ -117,7 +117,6 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 1rem 0 2rem 0;
   font-family: "smallcaps", serif; }
 
 img {
@@ -437,6 +436,45 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
       position: absolute;
       height: .1rem; }
 
+@media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
+  .navbar {
+    height: auto;
+    background-color: #3b3b3b; }
+    .navbar .navbar-collapse {
+      padding-top: 1em; }
+
+  .solid .navbar-collapse {
+    background: none; }
+
+  .nav-item {
+    text-align: center;
+    padding: 1em 0; } }
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .navbar {
+    height: auto;
+    background-color: #3b3b3b; }
+    .navbar .navbar-collapse {
+      padding-top: 1em; }
+
+  .solid .navbar-collapse {
+    background: none; }
+
+  .nav-item {
+    text-align: center;
+    padding: 1em 0; } }
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .navbar {
+    height: auto;
+    background-color: #3b3b3b; }
+    .navbar .navbar-collapse {
+      padding-top: 1em; }
+
+  .solid .navbar-collapse {
+    background: none; }
+
+  .nav-item {
+    text-align: center;
+    padding: 1em 0; } }
 .nav-tabs {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -844,6 +882,9 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
   .body .error-desc {
     color: #4d4d4d; }
 
+.error404 .navbar {
+  background: #333; }
+
 .dark {
   background: #333;
   color: #fafafa; }
@@ -945,6 +986,10 @@ footer {
 .air {
   padding: 2em 0; }
 
+.title-section {
+  letter-spacing: 3px;
+  line-height: 2; }
+
 .description {
   text-align: center;
   font-size: larger;
@@ -962,10 +1007,31 @@ footer {
   font-family: "aperculight";
   border: 2px dashed #db8c0a;
   border-radius: 15px;
-  width: 60%;
-  margin: auto;
+  margin: auto 20%;
   animation: bounceTop 2s ease 0s 1 normal forwards; }
 
+@media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
+  .description {
+    padding: 3em;
+    font-size: medium; } }
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .description {
+    padding: 2em;
+    font-size: medium; }
+
+  .else-display {
+    width: 100%;
+    margin: auto;
+    margin-top: 1em; } }
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .description {
+    padding: 2em;
+    font-size: medium; }
+
+  .else-display {
+    width: 100%;
+    margin: auto;
+    margin-top: 1em; } }
 .filter {
   height: 90vh;
   background-position: 50% 50%;
@@ -1048,28 +1114,38 @@ footer {
   .jumb-message {
     font-size: x-large;
     padding: 2em; }
-  .jumb-title .msg-hero {
-    padding-top: 2em; } }
+  .jumb-title {
+    margin: auto 10%; }
+    .jumb-title .msg-hero {
+      padding-top: 2em;
+      font-family: "aperculight"; } }
 @media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
   .jumb-hero .logo {
     width: 30%; }
   .jumb-message {
     font-size: large; }
-  .jumb-title .miniature {
-    width: 20%; }
-  .jumb-title .msg-hero {
-    font-size: smaller; } }
+  .jumb-title {
+    margin: auto 10%; }
+    .jumb-title .miniature {
+      padding-top: 3em;
+      width: 20%; }
+    .jumb-title .msg-hero {
+      font-size: smaller;
+      font-family: "aperculight"; } }
 @media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
   .jumb-hero .logo {
     width: 70%; }
   .jumb-message {
     font-size: larger;
     padding: 1em; }
-  .jumb-title .miniature {
-    width: 50%; }
-  .jumb-title .msg-hero {
-    font-size: large;
-    padding-top: 2em; } }
+  .jumb-title {
+    margin: auto 10%; }
+    .jumb-title .miniature {
+      width: 50%; }
+    .jumb-title .msg-hero {
+      font-size: medium;
+      padding-top: 2em;
+      font-family: "aperculight"; } }
 .info {
   background: #333;
   color: #919191;
@@ -1110,6 +1186,9 @@ footer {
   line-height: 3;
   font-size: smaller; }
 
+.today {
+  color: #F5A623; }
+
 .social-list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1131,6 +1210,30 @@ footer {
 .info-foncer, .footer-foncer {
   background-color: #262626; }
 
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .block-logo {
+    margin-top: 2em;
+    margin-bottom: 1em; }
+
+  .block-horaire {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .block-logo {
+    margin-top: 2em;
+    margin-bottom: 1em; }
+
+  .block-horaire {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
 .reservation {
   color: #F5A623;
   padding: 3em 0;
