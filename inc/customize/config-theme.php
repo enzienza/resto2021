@@ -118,13 +118,21 @@ add_filter(
              true
          );
 
-         wp_enqueue_script(
-             'dark-mode',
-             get_template_directory_uri().'/assets/js/dark-mode.js',
-             [],
-             '1.0',
-             true
-         );
+	     wp_enqueue_script(
+		     'highlight-today',
+		     get_template_directory_uri().'/assets/js/highlight-today.js',
+		     [],
+		     '1.0',
+		     true
+	     );
+//
+//         wp_enqueue_script(
+//             'dark-mode',
+//             get_template_directory_uri().'/assets/js/dark-mode.js',
+//             [],
+//             '1.0',
+//             true
+//         );
 
          // CDN jQuery -------------------------------
          wp_deregister_script('jquery');
