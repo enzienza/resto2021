@@ -14,7 +14,7 @@
     <?php get_template_part('template/homepage/hero'); ?>
     <?php get_template_part('template/homepage/title'); ?>
 
-    <section class="air container post">
+    <section class="container post" id="buffet">
         <ul class="nav nav-tabs">
 		    <?php
                 wp_reset_postdata();

@@ -577,7 +577,6 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
   padding-bottom: 0.5em;
   font-size: larger;
   line-height: 2;
-  text-transform: capitalize;
   font-weight: bold;
   letter-spacing: 2px; }
 .tab-content .tab-pane table {
@@ -600,11 +599,6 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
       text-align: left;
       padding-right: 2em;
       width: 10%; }
-.tab-content .tab-pane p {
-  line-height: 2;
-  padding-top: 1em;
-  text-align: center;
-  letter-spacing: 1px; }
 .tab-content .table-two-column table td:first-child {
   width: 80% !important;
   text-align: justify !important;
@@ -843,6 +837,17 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
     left: 180px;
     width: 80px; }
 
+.wp-block-file__button {
+  background: none !important;
+  border: 1px solid #F5A623;
+  color: #F5A623 !important;
+  letter-spacing: 2px; }
+  .wp-block-file__button a:hover {
+    background: none !important; }
+  .wp-block-file__button:hover {
+    background: #f7ba54 !important;
+    color: #fafafa !important; }
+
 .wp-block-image {
   text-align: center;
   width: 100%; }
@@ -864,16 +869,24 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
         width: 100%;
         height: auto; } }
 
-.wp-block-file__button {
-  background: none !important;
-  border: 1px solid #F5A623;
-  color: #F5A623 !important;
-  letter-spacing: 2px; }
-  .wp-block-file__button a:hover {
-    background: none !important; }
-  .wp-block-file__button:hover {
-    background: #f7ba54 !important;
-    color: #fafafa !important; }
+p {
+  margin: 0; }
+
+.big-price {
+  font-family: "bodoni";
+  color: #F5A623;
+  font-size: 1.5rem; }
+
+#buffet .tab-pane .title {
+  font-size: 2rem;
+  padding: 0;
+  margin-top: 1rem;
+  letter-spacing: 3px;
+  font-weight: inherit; }
+#buffet .tab-pane .sub-Title {
+  font-family: "bodoni";
+  font-size: 1.3rem;
+  letter-spacing: 1px; }
 
 .body {
   background: #fafafa;
@@ -884,6 +897,34 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
 
 .error404 .navbar {
   background: #333; }
+
+.nav-tabs .nav-item {
+  -webkit-box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.05); }
+
+.tab-content {
+  border: none;
+  background-color: inherit;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 15px 15px;
+  padding-bottom: 1rem; }
+
+#buffet .nav-tabs {
+  height: inherit; }
+  #buffet .nav-tabs .nav-item {
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+#buffet .else-display {
+  margin-top: 1.5em; }
 
 .dark {
   background: #333;
@@ -927,6 +968,20 @@ footer {
     color: #7b7b7b; }
     footer a:hover {
       color: #f7ba54; }
+  @media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+    footer {
+      padding: 1em 4em;
+      line-height: inherit;
+      height: calc(3em * 2); }
+      footer .float-left, footer .float-right {
+        float: inherit !important; } }
+  @media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+    footer {
+      padding: 1em 4em;
+      line-height: inherit;
+      height: calc(3em * 2); }
+      footer .float-left, footer .flying-right {
+        float: inherit !important; } }
 
 .error {
   margin: 0 auto;
@@ -1007,8 +1062,10 @@ footer {
   font-family: "aperculight";
   border: 2px dashed #db8c0a;
   border-radius: 15px;
-  margin: auto 20%;
   animation: bounceTop 2s ease 0s 1 normal forwards; }
+
+#buffet {
+  margin: 1em auto 4rem; }
 
 @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
   .description {

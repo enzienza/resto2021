@@ -1,0 +1,32 @@
+// main: ../_elements.scss
+
+p{
+    margin: 0;
+}
+
+
+
+
+// TAB-CONTENT --> BUFFET ----------------------------
+.big-price{
+    font-family: $font-number;
+    color: $color-primary;
+    font-size: 1.5rem;
+}
+
+#buffet {
+    .tab-pane {
+        .title {
+            font-size: 2rem;
+            padding: 0;
+            margin-top: 1rem;
+            letter-spacing: 3px;
+            font-weight: inherit;
+        }
+        .sub-Title{
+            font-family: $font-number;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+    }
+}
