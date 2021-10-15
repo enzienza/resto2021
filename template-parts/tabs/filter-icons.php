@@ -23,6 +23,6 @@
         <p class="item-icon">
             <i class="icons <?php echo get_post_meta(get_the_ID(), MB_use_faticons::META_KEY, true); ?>"></i>
         </p>
-        <p><?php the_title(); ?></p>
+        <p class="item-name"><?php the_title(); ?></p>
     </a>
 </li>

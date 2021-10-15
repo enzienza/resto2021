@@ -47,6 +47,13 @@
         padding: 3em;
         font-size: medium;
     }
+
+    .else-display{
+        letter-spacing: 2px;
+        line-height: 1.5;
+        padding: 1.5rem;
+        font-size: medium;
+    }
 }
 
 @include responsive(SM){
@@ -59,6 +66,8 @@
         width: 100%;
         margin: auto;
         margin-top: 1em;
+        font-size: small !important;
+        letter-spacing: 2px;
     }
 }
 
@@ -72,5 +81,7 @@
         width: 100%;
         margin: auto;
         margin-top: 1em;
+        padding: 1em;
+        letter-spacing: 2px;
     }
 }

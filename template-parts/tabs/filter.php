@@ -20,6 +20,6 @@
         aria-controls="<?php $title = sanitize_title(get_the_title()); echo $title;?>"
         aria-selected="true"
     >
-        <p><?php the_title(); ?></p>
+        <p class="item-name"><?php the_title(); ?></p>
     </a>
 </li>
