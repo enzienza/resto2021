@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: cartes
+ * Template Post Type: post, page
  *
  * description: The template for displaying for post-type cartes
  *

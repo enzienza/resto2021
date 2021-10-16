@@ -1,0 +1,120 @@
+// main: _elements.scss
+
+.wp-block-table{
+    margin: 2em 0 1em;
+    table{
+        //padding-bottom: 1.5em;
+
+        tr{
+            border-bottom: 1px solid lighten($color-grey, 30%);
+            line-height: 3;
+            &:last-child{
+                border: none;
+            }
+        }
+
+        td{
+            padding: 0 .5em;
+            border: none;
+            border-collapse: collapse;
+
+            &:first-child{
+                text-align: right;
+                padding-left: .5em;
+                width: 10%;
+                padding-right: 2em;
+            }
+
+            &:last-child{
+                text-align: right;
+                padding-right: 2em;
+                width: 10%;
+            }
+        }
+    }
+
+    .table-two-column{
+        table{
+            td{
+                &:first-child{
+                    width: 80% !important;
+                    text-align: justify !important;
+                    line-height: 1.5 !important;
+                    padding: 1em !important;
+                }
+
+                &:last-child {
+                    text-align: center !important;
+                    padding-right: 0em !important;
+                }
+            }
+        }
+    }
+
+
+
+
+    @include responsive(MD){
+        table{
+            td{
+                padding: .5em;
+                &:first-child{
+                    padding-right: 1em;
+                    padding-left: 1em;
+                }
+                &:last-child{
+                    padding-right: 1em;
+                    padding-left: 1em;
+                }
+            }
+        }
+    }
+
+    @include responsive(SM){
+        table{
+            font-size: small;
+            tr{
+
+            }
+
+            td{
+                line-height: 1;
+                padding: .5em;
+
+                &:first-child{
+                    text-align: right;
+                    padding-right: 1em;
+                }
+                &:last-child{
+                    padding-right: 0;
+                    padding-left: 1em;
+                }
+            }
+        }
+    }
+
+    @include responsive(XS){
+        table{
+            font-size: small;
+            tr{
+
+            }
+
+            td{
+                line-height: 1;
+                padding: .5em;
+
+                &:first-child{
+                    text-align: right;
+                    padding-right: 1em;
+                }
+                &:last-child{
+                    padding-right: 0;
+                    padding-left: 1em;
+                }
+            }
+        }
+    }
+
+}
+

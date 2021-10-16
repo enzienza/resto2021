@@ -1,0 +1,52 @@
+// main: _elements.scss
+
+.wp-block-group{
+    margin: 1em auto;
+    padding: 1em;
+    border-top: 1px dashed lighten($color-grey, 15%);
+    &:first-child{
+        border: none;
+    }
+
+    .title{
+        font-size: 2rem;
+        //font-size: xx-large;
+        padding: 0;
+        margin-top: 1rem;
+        letter-spacing: 3px;
+        font-weight: inherit;
+        line-height: inherit;
+        margin-bottom: 0;
+    }
+    .sub-title{
+        font-family: $font-number;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+    }
+    
+    
+    h4{
+        font-style: $font-number;
+        padding-top: .4em;
+        &::before{
+            content: "-";
+            padding-right: 5px;
+            //color: $color-grey;
+        }
+    }
+
+    .list-item{
+        list-style: circle;
+        margin-left: 1.5em;
+        li{
+            padding-left: 5px;
+        }
+    }
+
+    .compo{
+        margin-left: 1.5em;
+        line-height: inherit;
+        margin-bottom: 1rem;
+    }
+}

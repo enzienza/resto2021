@@ -1,15 +1,21 @@
 // main: ../_layout.scss
 
 .dark{
-  background: $color-dark;
+  background: darken($color-night, 3%);
   color: $color-light;
+
+  .solid{
+    background: darken($color-night, 3%);
+  }
 
   // footer ------------------------------------
   footer{
-    background: $color-night;
+    //background: darken($color-night, 3%);
+    background: darken($color-dark, 15%);
   }
   .info{
-    background: $color-night;
+    //background: darken($color-night, 3%);
+    background: darken($color-dark, 15%);
   }
 
 
@@ -21,14 +27,18 @@
   // filter / tabs -----------------------------
   .nav-tabs{
     text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    background: darken($color-night,4%);
+
     .tab-pane{
       text-shadow: 4px 2px 4px rgba(9, 9, 9, .9);
     }
   }
   .tab-content{
-    @include box-shadow(0 0 10px rgba(0, 0, 0, .3));
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    @include box-shadow(0 0 10px rgba(0, 0, 0, .5));
+    background: darken($color-night,4%);
+    //border-bottom-right-radius: 10px;
+    //border-bottom-left-radius: 10px;
   }
 
   // revervation -------------------------------

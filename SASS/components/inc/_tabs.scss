@@ -154,60 +154,13 @@
             letter-spacing: 2px;
         }
 
-        table{
-            padding-bottom: 1.5em;
 
-            tr{
-                border-bottom: 1px solid $color-grey;
-                line-height: 3;
-                &:last-child{
-                    border: none;
-                }
-            }
-
-            td{
-                padding: 0 .5em;
-                border: none;
-                border-collapse: collapse;
-
-                &:first-child{
-                    text-align: right;
-                    padding-left: .5em;
-                    width: 10%;
-                    padding-right: 2em;
-                }
-
-                &:last-child{
-                    text-align: left;
-                    padding-right: 2em;
-                    width: 10%;
-                }
-            }
-        }
 
         p{
             //line-height: 2;
             //padding-top: 1em;
             //text-align: center;
             //letter-spacing: 1px;
-        }
-    }
-
-    .table-two-column{
-        table{
-            td{
-                &:first-child{
-                    width: 80% !important;
-                    text-align: justify !important;
-                    line-height: 1.5 !important;
-                    padding: 1em !important;
-                }
-
-                &:last-child {
-                    text-align: center !important;
-                    padding-right: 0em !important;
-                }
-            }
         }
     }
 
@@ -221,48 +174,12 @@
 
 
     @include responsive(MD){
-        .tab-pane{
-            table{
-                td{
-                    padding: .5em;
-                    &:first-child{
-                        padding-right: 1em;
-                        padding-left: 1em;
-                    }
-                    &:last-child{
-                        padding-right: 1em;
-                        padding-left: 1em;
-                    }
-                }
-            }
-        }
     }
 
     @include responsive(SM){
         .tab-pane{
             h2{
                 font-size: medium;
-            }
-
-            table{
-                font-size: small;
-                tr{
-
-                }
-
-                td{
-                    line-height: 1;
-                    padding: .5em;
-
-                    &:first-child{
-                        text-align: right;
-                        padding-right: 1em;
-                    }
-                    &:last-child{
-                        padding-right: 0;
-                        padding-left: 1em;
-                    }
-                }
             }
 
             p{
@@ -276,27 +193,6 @@
         .tab-pane{
             h2{
                 font-size: medium;
-            }
-
-            table{
-                font-size: small;
-                tr{
-
-                }
-
-                td{
-                    line-height: 1;
-                    padding: .5em;
-
-                    &:first-child{
-                        text-align: right;
-                        padding-right: 1em;
-                    }
-                    &:last-child{
-                        padding-right: 0;
-                        padding-left: 1em;
-                    }
-                }
             }
 
             p{

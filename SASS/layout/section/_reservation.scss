@@ -2,6 +2,7 @@
 
 .reservation{
     color: $color-primary;
+    margin: 3em auto;
     padding: 3em 0;
     @include flex;
     @include justify-content(center);

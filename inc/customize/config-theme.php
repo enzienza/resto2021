@@ -69,6 +69,7 @@ add_filter(
     }
 );
 
+
 /**
  * 3 - Include Styles and script
  *     Function for runs the scripts and css for theme

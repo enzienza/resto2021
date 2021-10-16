@@ -22,9 +22,10 @@ p{
 }
 
 .note{
-    line-height: 2;
+    line-height: initial;
     letter-spacing: 1px;
     font-family: $font-primary-light;
+    padding: 1em 0;
 }
 
 @include responsive(MD){
