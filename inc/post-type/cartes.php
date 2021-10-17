@@ -77,8 +77,9 @@ function CPT_cartes(){
 		'public'            => true,
 		'hierarchical'      => false,
 		//'hierarchical'      => true,              // parent / child
-		'has_archive'       => true,
-		'show_in_rest'      => true,              // oui => / editeur Gutemberg
+		//'has_archive'       => true,              // c'est une archive => archive-{$post-type}
+		'has_archive'       => false,               // c'est une page => page-{$post-type}
+		'show_in_rest'      => true,                // oui => / editeur Gutemberg
 		//'show_in_rest'      => false,             // non => / editeur Gutemberg
 		'show_in_menu'      => true,
 		'query_var'         => true,

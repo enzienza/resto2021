@@ -115,8 +115,6 @@ add_filter(
          wp_enqueue_script('jquery-cookie');
 
 
-
-
          // MY JavaScript ------------------------------------
 	     wp_enqueue_script(
              'scroll-top',
