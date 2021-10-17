@@ -1,6 +1,6 @@
 /**
- * Name file:
- * Description:
+ * Name file: switchMode
+ * Description: use jQuery for create a switcher between day mode and dark mode
  *
  * Version: 1.0
  * Author: Enza Lombardo
