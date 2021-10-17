@@ -25,7 +25,7 @@
 
   <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class("dark"); ?>>
   <div class="header" role="banner">
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
       <div class="container">

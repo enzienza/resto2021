@@ -37,8 +37,13 @@
   .tab-content{
     @include box-shadow(0 0 10px rgba(0, 0, 0, .5));
     background: darken($color-night,4%);
-    //border-bottom-right-radius: 10px;
-    //border-bottom-left-radius: 10px;
+  }
+
+  // Table -------------------------------------
+  .wp-block-table{
+    table tr{
+      border-color: darken($color-grey, 30%);
+    }
   }
 
   // revervation -------------------------------
@@ -60,4 +65,37 @@
       color:lighten($color-dark, 30%);
     }
   }
+
+
+  // MODAL --> page event ------------------------
+  .thumbnail {
+    img {
+      border-radius: .5em;
+      @include box-shadow(0 1rem 4rem rgba(9, 9, 9, .9));
+    }
+  }
+
+  .modal{
+    &-content{
+      background: lighten($color-night, 2%);
+    }
+    &-header{
+      border-color: $color-grey;
+    }
+    &-title{
+      text-shadow: 4px 2px 4px rgba(9, 9, 9, .9);
+    }
+  }
+  .close{
+    color: $color-light;
+    text-shadow: 4px 2px 4px rgba(9, 9, 9, .9);
+  }
+
+  .wp-block-file__button{
+    text-shadow: 4px 2px 4px rgba(9, 9, 9, .9);
+  }
+
+
 }
+
+

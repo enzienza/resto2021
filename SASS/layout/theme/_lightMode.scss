@@ -49,8 +49,9 @@
     }
 
     .else-display{
-        margin-top: 1.5em;
+        //margin-top: 1.5em;
     }
+
     @include responsive(MD){
         .nav-tabs{
             .nav-item{

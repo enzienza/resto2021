@@ -379,7 +379,8 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
   padding: 0 1rem; }
 .modal-title {
   margin: 0.5rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  color: #F5A623; }
 .modal-dialog {
   max-width: calc(100vw - 30%); }
 @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
@@ -1102,8 +1103,6 @@ p {
   -ms-flex-align: center;
   align-items: center;
   margin: auto .5rem; }
-#buffet .else-display {
-  margin-top: 1.5em; }
 @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
   #buffet .nav-tabs .nav-item {
     width: inherit;
@@ -1150,6 +1149,8 @@ p {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background: #1a1b1b; }
+  .dark .wp-block-table table tr {
+    border-color: #454545; }
   .dark .reservation {
     color: #F5A623;
     text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
@@ -1160,6 +1161,21 @@ p {
     text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
   .dark .error-desc {
     color: gray; }
+  .dark .thumbnail img {
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1rem 4rem rgba(9, 9, 9, 0.9);
+    box-shadow: 0 1rem 4rem rgba(9, 9, 9, 0.9); }
+  .dark .modal-content {
+    background: #292a2a; }
+  .dark .modal-header {
+    border-color: #919191; }
+  .dark .modal-title {
+    text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
+  .dark .close {
+    color: #fafafa;
+    text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
+  .dark .wp-block-file__button {
+    text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
 
 footer {
   background: #333;
@@ -1318,6 +1334,7 @@ footer {
   letter-spacing: 3px;
   text-align: center;
   line-height: 2;
+  margin-top: 1.5em;
   padding: 2em;
   text-align: center;
   font-family: "aperculight";
@@ -1644,9 +1661,9 @@ footer {
   .reserve-info {
     display: block; }
   .reserve-message {
-    font-size: x-large; }
+    font-size: calc(100% / 0.9); }
   .reserve-phone {
-    font-size: large; } }
+    font-size: calc(100% / 0.7); } }
 @media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
   .reservation {
     margin: auto; }
@@ -1677,6 +1694,6 @@ footer {
     font-size: calc(100% / 0.9);
     line-height: 2; }
   .reserve-phone {
-    font-size: medium; } }
+    font-size: calc(100% / 0.7); } }
 
 /*# sourceMappingURL=style.css.map */

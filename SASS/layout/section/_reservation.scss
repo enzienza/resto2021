@@ -112,10 +112,10 @@
             display: block;
         }
         &-message{
-            font-size: x-large;
+            font-size: calc(100% / 0.9);
         }
         &-phone{
-            font-size: large;
+            font-size: calc(100% / 0.7);
         }
     }
 }
@@ -157,7 +157,7 @@
             line-height: 2;
         }
         &-phone{
-            font-size: medium;
+            font-size: calc(100% / 0.7);
         }
     }
 }
