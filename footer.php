@@ -26,7 +26,7 @@
       </div>
 
       <div class="float-right">
-        © <?php bloginfo('name')?> 2020.
+        © <?php bloginfo('name')?> 2021.
         All Rights Reserved.
         Designed by
         <a href="http://enzalombardo.be/" target="_blank">Enza Lombardo</a>.

@@ -13,8 +13,8 @@
 <div class="switcher-mode">
   <input type="checkbox" class="checkbox" id="chk" />
   <label class="label" for="chk">
-     <i class="icons flaticon-moon"></i>
-      <div class="ball"></div>
      <i class="icons flaticon-sun"></i>
+      <div class="ball"></div>
+     <i class="icons flaticon-moon"></i>
   </label>
 </div>
