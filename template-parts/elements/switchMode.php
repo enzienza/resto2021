@@ -10,18 +10,11 @@
  */
  ?>
 
-
-<!-- <div class="toggles flip">
-  <input type="checkbox" name="switch" id="switch" />
-  <label for="switch"></label>
-</div> -->
-
 <div class="switcher-mode">
   <input type="checkbox" class="checkbox" id="chk" />
   <label class="label" for="chk">
-    <!-- Add fontt flaticon -->
-    <!-- <i class="fas fa-moon"></i> -->
-    <!-- <i class="fas fa-sun"></i> -->
-    <div class="ball"></div>
+     <i class="icons flaticon-sun"></i>
+      <div class="ball"></div>
+     <i class="icons flaticon-moon"></i>
   </label>
 </div>

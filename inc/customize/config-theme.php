@@ -103,8 +103,22 @@ add_filter(
 
          wp_enqueue_script('bootstrap');
 
+         // CDN popper -------------------------------
+         wp_register_script(
+             'jquery-cookie',
+             'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js
+',
+             [],
+             '1.4.1', true
+         );
+
+         wp_enqueue_script('jquery-cookie');
+
+
+
+
          // MY JavaScript ------------------------------------
-         wp_enqueue_script(
+	     wp_enqueue_script(
              'scroll-top',
              get_template_directory_uri().'/assets/js/scrollTop.js',
              [],
@@ -126,14 +140,14 @@ add_filter(
 		     '1.0',
 		     true
 	     );
-//
-//         wp_enqueue_script(
-//             'dark-mode',
-//             get_template_directory_uri().'/assets/js/dark-mode.js',
-//             [],
-//             '1.0',
-//             true
-//         );
+
+	     wp_enqueue_script(
+		     'switchMode',
+		     get_template_directory_uri().'/assets/js/switchMode.js',
+		     [],
+		     '1.0',
+		     true
+	     );
 
          // CDN jQuery -------------------------------
          wp_deregister_script('jquery');

@@ -739,8 +739,8 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
 
 .switcher-mode {
   position: fixed;
-  bottom: 1.5em;
-  left: 1.5em; }
+  bottom: 26px;
+  left: 26px; }
 
 .checkbox {
   opacity: 0;
@@ -752,28 +752,36 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
   background: #4d4d4d;
   position: relative;
   border-radius: 50px;
-  height: 26px;
-  width: 50px;
-  padding: 5px;
+  height: 30px;
+  width: 55px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transform: scale(1.5); }
+  cursor: pointer;
+  margin: 0 7px; }
   .label .ball {
     background: #fafafa;
     border-radius: 50%;
     width: 22px;
     height: 22px;
     position: absolute;
-    left: 2px;
-    right: 2px;
+    left: 5px;
+    right: 5px;
     transform: translateX(0px);
-    transition: transform 0.2s linear; }
+    transition: all .2s ease;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15); }
+  .label .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
-.fa-moon {
+.flaticon-moon {
+  position: absolute;
+  right: 5px;
   color: #fafafa; }
-
-.fa-sun {
+.flaticon-sun {
+  position: absolute;
+  left: 5px;
   color: #fafafa; }
 
 .table-horaire {
