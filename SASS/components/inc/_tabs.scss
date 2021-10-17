@@ -11,6 +11,10 @@
         width: 6em;
         text-align: center;
         color: $color-grey;
+        @include flex;
+        @include align-content(center);
+        @include justify-content(center);
+        @include align-items(flex-start);
 
         .nav-link.active,
         .nav-item.show{
@@ -18,8 +22,15 @@
             border: none;
             border-bottom: 3px solid $color-primary;
             height: 100%;
+            width: 100%;
             background-color: inherit;
            @include box-shadow(0 0 10px rgba(0, 0, 0, .17));
+            @include flex;
+            @include flex-wrap(nowrap);
+            @include align-content(center);
+            @include justify-content(center);
+            @include align-items(center);
+            @include direction-column;
         }
 
         .nav-link{
@@ -28,7 +39,14 @@
                 border: none;
                 border-bottom: 3px solid $color-primary-light;
                 height: 100%;
+                width: 100%;
                @include box-shadow(0 0 10px rgba(0, 0, 0, .3));
+                @include flex;
+                @include flex-wrap(nowrap);
+                @include align-content(center);
+                @include justify-content(center);
+                @include align-items(center);
+                @include direction-column;
             }
         }
 
@@ -55,10 +73,12 @@
 
     @include responsive(MD){
         height: auto;
-        flex-wrap: nowrap;
+        @include flex-wrap(wrap);
         .nav{
             &-item{
-                width: inherit;
+                @include direction-column;
+                @include align-items(center);
+                width: 7em;
                 height: 8em;
                 //border: 1px solid rgba(8, 8, 8, .2);
                 padding: 0;
@@ -66,7 +86,7 @@
             }
 
             &-link{
-                padding-top: 1.5em;
+                padding: 0;
                 &:hover{
                    @include box-shadow(0 0 10px rgba(0, 0, 0, .3));
                 }
@@ -80,10 +100,12 @@
 
     @include responsive(SM){
         height: auto;
-        flex-wrap: nowrap;
+        @include flex-wrap(wrap);
         .nav{
             &-item{
-                width: inherit;
+                @include direction-column;
+                @include align-items(center);
+                width: 6em;
                 height: 7em;
                 border: 1px solid rgba(8, 8, 8, .2);
                 padding: 0;
@@ -91,7 +113,7 @@
             }
 
             &-link{
-                padding-top: 1.5em;
+                padding: 0;
                 &:hover{
                    @include box-shadow(0 0 10px rgba(0, 0, 0, .3));
                 }
@@ -105,18 +127,20 @@
 
     @include responsive(XS){
         height: auto;
-        flex-wrap: nowrap;
+        @include flex-wrap(wrap);
         .nav{
             &-item{
-                width: inherit;
-                height: 8em;
+                @include direction-column;
+                @include align-items(center);
+                width: 7em;
+                height: 6em;
                 //border: 1px solid rgba(8, 8, 8, .2);
                 padding: 0;
                 color: $color-grey;
             }
 
             &-link{
-                padding-top: 1.5em;
+                padding: 0;
                 &:hover{
                    @include box-shadow(0 0 10px rgba(0, 0, 0, .3));
                 }

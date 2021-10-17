@@ -84,16 +84,24 @@
 
 @include responsive(SM){
     .reservation{
+        margin: auto;
         .content{
             margin: 2em auto;
         }
         .group-list{
-            display: block;
+            @include flex;
+            @include direction-row;
             text-align: center;
+            //width: 90%;
+            padding: 1rem;
         }
     }
 
     .reserve{
+        &-icon{
+            font-size: calc(100% / 0.4);
+            margin-right: 1rem;
+        }
         &-image{
             margin: 1em;
             .miniature{
@@ -114,19 +122,26 @@
 
 @include responsive(XS){
     .reservation{
-        margin: 15px;
+        margin: auto;
         .content{
             margin: 3em auto;
         }
 
         .group-list{
-            display: block;
+            @include flex;
+            @include direction-row;
             text-align: center;
+            //width: 90%;
+            padding: 1rem;
             //padding: 1em 0;
         }
     }
 
     .reserve{
+        &-icon{
+            font-size: calc(100% / 0.4);
+            margin-right: 1rem;
+        }
         &-image{
             margin: 0;
             .miniature{
@@ -138,7 +153,7 @@
         }
         &-message{
             letter-spacing: 2px;
-            font-size: larger;
+            font-size: calc(100% / 0.9);
             line-height: 2;
         }
         &-phone{

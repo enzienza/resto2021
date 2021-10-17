@@ -4,9 +4,6 @@ p{
     margin: 0;
 }
 
-
-
-
 // TAB-CONTENT --> BUFFET ----------------------------
 .big-price{
     font-family: $font-number;
@@ -52,76 +49,5 @@ p{
     }
     .desc{
         font-size: calc(100% / 1.5) !important;
-    }
-}
-
-#buffet {
-    .tab-pane {
-        .title {
-            font-size: 2rem;
-            //font-size: xx-large;
-            padding: 0;
-            margin-top: 1rem;
-            letter-spacing: 3px;
-            font-weight: inherit;
-            line-height: inherit;
-            margin-bottom: 0;
-        }
-        .sub-title{
-            font-family: $font-number;
-            font-size: 1.3rem;
-            letter-spacing: 1px;
-        }
-    }
-    .wp-block-columns{
-        margin: 2em auto;
-    }
-
-    @include responsive(MD){
-        .tab-pane{
-            .title{
-                font-size: calc(100% / 0.4);
-            }
-            .sub-title{
-                font-size: calc(100% / 1);
-            }
-        }
-        .wp-block-columns{
-            flex-direction: column;
-        }
-        .wp-block-column{
-            margin: 1rem;
-        }
-    }
-
-    @include responsive(SM){
-        .tab-pane{
-            .title{
-                font-size: calc(100% / 0.5);
-            }
-            .sub-title{
-                font-size: calc(100% / 1);
-            }
-        }
-        .wp-block-columns{
-            flex-direction: column;
-        }
-        .wp-block-column{
-            margin: 1rem;
-        }
-    }
-
-    @include responsive(XS){
-        .tab-pane{
-            .title{
-                font-size: calc(100% / 0.6);
-            }
-            .sub-title{
-                font-size: calc(100% / 0.8);
-            }
-        }
-        .wp-block-column{
-            margin: 1rem;
-        }
     }
 }

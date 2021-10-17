@@ -29,7 +29,7 @@
             if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
         ?>
                 <!-- Button trigger modal -->
-            <div class="col-md-4 col-12 thumbnail" data-toggle="modal" data-target="#eventModal">
+            <div class="col-lg-4 col-md-6 col-12 thumbnail" data-toggle="modal" data-target="#eventModal">
 	            <?php the_post_thumbnail(); ?>
             </div>
 
