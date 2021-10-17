@@ -770,10 +770,13 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
     transform: translateX(0px);
     transition: transform 0.2s linear; }
 
-.fa-moon {
+.flaticon-moon {
+  position: absolute;
+  right: 5px;
   color: #fafafa; }
-
-.fa-sun {
+.flaticon-sun {
+  position: absolute;
+  left: 5px;
   color: #fafafa; }
 
 .table-horaire {

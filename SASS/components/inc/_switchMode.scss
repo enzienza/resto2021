@@ -43,12 +43,15 @@
   }
 }
 
-
-// ICON switch
-.fa-moon {
-  color: $color-light;
-}
-
-.fa-sun {
-  color: $color-light;
+.flaticon{
+  &-moon{
+    position: absolute;
+    right: 5px;
+    color: $color-light;
+  }
+  &-sun{
+    position: absolute;
+    left: 5px;
+    color: $color-light;
+  }
 }
