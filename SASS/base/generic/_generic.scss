@@ -5,7 +5,8 @@ html {
 }
 
 body{
-  font-family: $font-primary;
+    font-family: $font-primary;
+    font-size: calc(0.55em + 1vmin);
 }
 
 
@@ -16,11 +17,22 @@ h4,
 h5,
 h6 {
     font-family: $font-secondary;
-    //margin-bottom: .5em;
+}
+
+h1{
+    font-size: calc(3em + 1vw);
+}
+
+h2{
+    font-size: calc(2em + 1vw);
+}
+
+h3{
+    font-size: calc(1em + 1vw);
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .center{

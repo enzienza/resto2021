@@ -6,41 +6,61 @@
     margin-bottom: 0;
 }
 
+.block{
+    &-contact{
+        .title{
+            letter-spacing: 1px;
+        }
+    }
+    &-horaire{
+        margin-bottom: 2em;
+    }
+
+    &-logo{
+        .logo{
+            width: 14em;
+            height: auto;
+            @include filter-invert(0.5);
+        }
+    }
+}
+
 .block-contact, .block-horaire{
     margin-top: 3em;
     font-family: $font-primary-light;
 }
 
-.block-contact, .block-logo{
+.block-contact{
+    @include align-items(start);
+}
+.block-logo, .block-horaire{
+    @include align-items(center);
+}
+
+.block-contact, .block-logo, .block-horaire{
     @include flex;
     @include justify-content(center);
-    @include align-content(center);
-    @include align-items(baseline);
     @include flex-wrap(wrap);
 }
 
-.block-horaire{
-    margin-bottom: 2em;
-}
-
-.contacting{
-    .title{
-        font-size: x-large;
-        font-family: $font-secondary;
-        font-weight: bold;
-        line-height: 2;
-    }
-    .location{
-        width: 150px;
-    }
-    p{
-        margin-bottom: 0;
-    }
-    .phone{
-        line-height: 3;
-        font-size: smaller;
-    }
-}
+//.contacting{
+//    .title{
+//        font-size: x-large;
+//        font-family: $font-secondary;
+//        font-weight: bold;
+//        line-height: 2;
+//    }
+//    .location{
+//        width: 150px;
+//    }
+//    p{
+//        margin-bottom: 0;
+//    }
+//    .phone{
+//        line-height: 3;
+//        font-size: smaller;
+//    }
+//}
 
 .today{
     color: $color-primary;
@@ -48,13 +68,15 @@
 
 .social{
     &-list{
-        @include inline-flex;
+        @include flex;
+        @include flex-wrap(nowrap);
+        @include direction-row;
         margin-bottom: 0;
     }
     &-item{
-        padding: 0 .5em;
+        padding-right: .5em;
         &:first-child{
-            padding-right: 2px;
+            //padding-right: 2px;
         }
 
         .icons{
@@ -66,41 +88,53 @@
     }
 }
 
-.block-logo{
-    .logo{
-        width: 14em;
-        height: auto;
-        @include filter-invert(0.5);
-    }
-}
-
 .info-foncer, .footer-foncer{
     background-color: darken($color-dark, 5%);
 }
 
 
 @include responsive(MD) {
-
+    .block-contact {
+        font-size: medium;
+        .title{
+            font-size: xx-large;
+        }
+    }
 }
 
 @include responsive(SM){
-    .block-logo{
-        margin-top: 2em;
-        margin-bottom: 1em;
-    }
-    .block-horaire{
-        @include flex;
-        @include justify-content(center);
+    .block{
+        &-contact{
+            font-size: medium;
+            .title{
+                font-size: xx-large;
+            }
+        }
+        &-logo{
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+        &-horaire{
+            @include flex;
+            @include justify-content(center);
+        }
     }
 }
 @include responsive(XS){
-    .block-logo{
-        margin-top: 2em;
-        margin-bottom: 1em;
-    }
-
-    .block-horaire{
-        @include flex;
-        @include justify-content(center);
+    .block{
+        &-contact{
+            font-size: medium;
+            .title{
+                font-size: xx-large;
+            }
+        }
+        &-logo{
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+        &-horaire{
+            @include flex;
+            @include justify-content(center);
+        }
     }
 }

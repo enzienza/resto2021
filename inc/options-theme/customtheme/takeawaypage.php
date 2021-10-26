@@ -104,7 +104,7 @@ class pekinparis_takeawaypage{
 	    // -> créer la section
 	    add_settings_section(
 		    self::SECTION_HERO,                      // SLUG_SECTION
-		    'Section banière',                       // TITLE
+		    'Section bannière',                       // TITLE
 		    [self::class, 'display_section_hero'],   // CALLBACK
 		    self::SUB3_GROUP                         // SLUG_PAGE
 	    );
