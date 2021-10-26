@@ -109,7 +109,8 @@ html {
   font-size: 100%; }
 
 body {
-  font-family: "apercu", sans-serif; }
+  font-family: "apercu", sans-serif;
+  font-size: calc(0.55em + 1vmin); }
 
 h1,
 h2,
@@ -118,6 +119,15 @@ h4,
 h5,
 h6 {
   font-family: "smallcaps", serif; }
+
+h1 {
+  font-size: calc(3em + 1vw); }
+
+h2 {
+  font-size: calc(2em + 1vw); }
+
+h3 {
+  font-size: calc(1em + 1vw); }
 
 img {
   max-width: 100%; }
@@ -601,8 +611,9 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        width: 7em;
-        height: 8em;
+        min-width: 6em;
+        height: 7em;
+        border: 1px solid #efefef;
         padding: 0;
         color: #919191; }
       .nav-tabs .nav-link {
@@ -629,7 +640,7 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
         align-items: center;
         width: 6em;
         height: 7em;
-        border: 1px solid rgba(8, 8, 8, 0.2);
+        border: 1px solid #efefef;
         padding: 0;
         color: #919191; }
       .nav-tabs .nav-link {
@@ -654,8 +665,9 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        width: 7em;
+        width: 5em;
         height: 6em;
+        border: 1px solid #efefef;
         padding: 0;
         color: #919191; }
       .nav-tabs .nav-link {
@@ -785,7 +797,7 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
   color: #fafafa; }
 
 .table-horaire {
-  font-size: smaller;
+  font-size: small;
   width: 75%; }
   .table-horaire .item-days {
     border-bottom: 1px solid #4d4d4d;
@@ -1504,70 +1516,75 @@ footer {
   color: #919191;
   margin-bottom: 0; }
 
-.block-contact, .block-horaire {
-  margin-top: 3em;
-  font-family: "aperculight"; }
-
-.block-contact, .block-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-
+.block-contact .title {
+  letter-spacing: 1px; }
 .block-horaire {
   margin-bottom: 2em; }
-
-.contacting .title {
-  font-size: x-large;
-  font-family: "smallcaps", serif;
-  font-weight: bold;
-  line-height: 2; }
-.contacting .location {
-  width: 150px; }
-.contacting p {
-  margin-bottom: 0; }
-.contacting .phone {
-  line-height: 3;
-  font-size: smaller; }
-
-.today {
-  color: #F5A623; }
-
-.social-list {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-bottom: 0; }
-.social-item {
-  padding: 0 .5em; }
-  .social-item:first-child {
-    padding-right: 2px; }
-  .social-item .icons:hover {
-    color: #f7ba54; }
-
 .block-logo .logo {
   width: 14em;
   height: auto;
   -webkit-filter: invert(0.5);
   filter: invert(0.5); }
 
+.block-contact, .block-horaire {
+  margin-top: 3em;
+  font-family: "aperculight"; }
+
+.block-contact {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start; }
+
+.block-logo, .block-horaire {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.block-contact, .block-logo, .block-horaire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.today {
+  color: #F5A623; }
+
+.social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-bottom: 0; }
+.social-item {
+  padding-right: .5em; }
+  .social-item .icons:hover {
+    color: #f7ba54; }
+
 .info-foncer, .footer-foncer {
   background-color: #262626; }
 
+@media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) {
+  .block-contact {
+    font-size: medium; }
+    .block-contact .title {
+      font-size: xx-large; } }
 @media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .block-contact {
+    font-size: medium; }
+    .block-contact .title {
+      font-size: xx-large; }
   .block-logo {
     margin-top: 2em;
     margin-bottom: 1em; }
-
   .block-horaire {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1576,10 +1593,13 @@ footer {
     -ms-flex-pack: center;
     justify-content: center; } }
 @media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .block-contact {
+    font-size: medium; }
+    .block-contact .title {
+      font-size: xx-large; }
   .block-logo {
     margin-top: 2em;
     margin-bottom: 1em; }
-
   .block-horaire {
     display: -webkit-box;
     display: -ms-flexbox;

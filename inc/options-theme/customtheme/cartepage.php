@@ -104,7 +104,7 @@ class pekinparis_cartepage{
         // -> créer la section
         add_settings_section(
             self::SECTION_HERO,                      // SLUG_SECTION
-            'Section banière',                       // TITLE
+            'Section bannière',                       // TITLE
             [self::class, 'display_section_hero'],   // CALLBACK
             self::SUB2_GROUP                         // SLUG_PAGE
         );
