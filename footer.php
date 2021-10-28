@@ -22,7 +22,7 @@
 
     <small class="copyright">
       <div class="float-left">
-        <a href="#" class="">Privacy Policy</a>
+        <a href="<?php echo esc_url(home_url().'/politique-de-confidentialite') ?>" class="">Privacy Policy</a>
       </div>
 
       <div class="float-right">
