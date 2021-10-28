@@ -198,6 +198,9 @@ node_modules/
 # uncomment the next line
 #/wp-content/themes
 
+### Sass ###
+.sass-cache/
+
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,wordpress,phpstorm
 
