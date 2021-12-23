@@ -30,7 +30,7 @@ function remove_menus(){
     // remove_menu_page('themes.php');                  // Apparences
     // remove_menu_page('plugins.php');                 // Extentions
     // remove_menu_page('users.php');                   // Utilisateurs
-     remove_menu_page('tools.php');                   // Outils
+    // remove_menu_page('tools.php');                   // Outils
     // remove_menu_page('options-general.php');         // Réglages
 
     // remove_menu_page('edit.php?post_type=recettes'); // pour masque un custom_post_type
